@@ -2,8 +2,6 @@ import React from "react"
 import "./style.css"
 const LoginRegister = () => {
 
-  // The color lerp function is from Ross Zurowski v
-// https://gist.github.com/rosszurowski/67f04465c424a9bc0dae
 
 function lerpColor(a, b, amount) {
   var ah = parseInt(a.replace(/#/g, ""), 16),
@@ -214,15 +212,7 @@ class Leaf {
     ctx.lineTo(this.end.position.x, this.end.position.y);
     ctx.closePath();
     ctx.stroke();
-    /*
-    ctx.save();
-    ctx.translate(this.parent.position.x, this.parent.position.y);
-    ctx.rotate(angle + Math.PI / 2);
-    ctx.beginPath();
-    ctx.ellipse(0, -this.size, this.thickness, this.size, 0, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.restore();
-  */
+
   }
 }
 
@@ -415,7 +405,6 @@ function populate() {
   let part_x = W / div_x;
 
   for (let i = 0; i < total_div; i++) {
-    //offset_x = (i % div_x) * part_x,
     let offset_x = Util.random(0,W),
       offset_y = Math.floor(i / div_x),
       z_value = Util.map(offset_y, 0, div_y - 1, 0.8, 0),

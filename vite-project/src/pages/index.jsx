@@ -1,5 +1,4 @@
 export {default as HomePage} from './home';
-export {default as LoginPage} from './login';
 export {default as SettingsPage} from './settings';
 export {default as NotFound} from './NotFound';
 

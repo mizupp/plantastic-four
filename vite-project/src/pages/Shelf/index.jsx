@@ -1,9 +1,14 @@
+// Shelf page
+
 import React from "react";
+import Inventory from "../../components/Inventory";
 
 const Shelf = () => {
 return (
     <>
-        <h1>Shelf page</h1>
+
+        <Inventory />
+
     </>
 )
 }
