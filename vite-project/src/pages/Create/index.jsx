@@ -1,15 +1,15 @@
 import React from "react"
 import { useState } from "react"
 import DatePicker from "react-datepicker";
-
+import AvatarSelection from "../../components/AvatarSelection";
 import './styles.css'
-
+import './index.css'
 const Create = () => {
 
 const [newPlant, setNewPlant] = useState(null)
-// const [nickname, setNickname] = useState(null);
-// const [purchase_date, setPurchaseDate] = useState(null);
-// const [water_freq, setWaterFreq] = useState(null);
+const [nickname, setNickname] = useState(null);
+const [purchase_date, setPurchaseDate] = useState(null);
+const [water_freq, setWaterFreq] = useState(null);
 
 const [startDate, setStartDate] = useState(new Date());
 
@@ -42,14 +42,17 @@ const createNewPlant = async (newPlant) => {
 
 return (
     <>
+
+  
         <form onSubmit={handleSubmit} className="create-form" >
-            <span className="header">
-                <h1>Add your plant</h1>
                 <div className="avatar">
-                    <img src="#" alt="Avatar selection" />
-                    {/* Allow users to choose a plant avatar */}
+                        <div className="AvatarSelection">	
+                        <AvatarSelection  />
+                        </div>	
                 </div>
-            </span>
+           
+            <div className="createList">
+            <h1>Add your plant</h1>
             <div id='nickname' className="input-section">
                 <label htmlFor="nickname"><h3>Nickname</h3></label>
                 <input type="text" name="nickname" className="nickame" required />
@@ -63,10 +66,12 @@ return (
                 <label htmlFor="watering"><h3>Please choose watering frequency (per month)</h3></label>
                 <input type="text" name="watering" className="watering" />
             </div>
-            <div className="submit">
+            <div className="submitCreate">
                 <input type="submit" className="submit-btn" value='Add plant' required/>
             </div>
+            </div>
         </form>
+
     </>
     )
 }

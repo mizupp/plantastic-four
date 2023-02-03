@@ -134,7 +134,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 canvas {
   flex-shrink: 0;

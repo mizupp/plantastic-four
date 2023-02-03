@@ -1,87 +1,50 @@
 /* Create page styling */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
-/* Maybe make this leaf shaped like the login page? */
-.create-form {
-    background-color: #43A047;
-    font-family: 'Fredericka the Great', cursive;
-    font-weight: 700;
-    padding: 30px;
-    display: grid;
-    height: 80vh;
-    width: 100vh;
-    text-align: center;
+/* .createContainer {
+	display: grid;
+	grid-template-areas:
+		"avatar create create"
+		"avatar create create"
+		"avatar create create"
+		"avatar create submit";
+	justify-items: center;
 }
 
-.create-form .header {
-    display: flex;
-    justify-content: space-between;
+.AvatarSelection {
+	grid-area: avatar;
 }
 
-.create-form h1 {
-    font-size: 2.5rem;
-    padding: 20px;
-    font-family: 'Fredericka the Great', cursive;
+.createList {
+	grid-area: create;
 }
 
-.create-form .avatar {
-    background-color: grey;
-    padding: 20px;
-    width: 30%;
-    height: 100%;
+.submitCreate {
+	grid-area: submit;
+}
+ */
+
+ .AvatarSelection {
+    /* position: absolute;
+	right: 5vw;
+    top:10%; */
+
 }
 
-
-.react-datepicker__tab-loop {
-    visibility: hidden;
+.createList{
+flex-direction: row;
+ height: 400px;
+ width: 400px;
+ position: absolute;
+ right:100px;
+ top:50px;
 }
 
-/* Styling all */
-
-.create-form .input-section {
-    background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
-    margin-bottom: 20px;
-    padding: 20px;
-    border-top-left-radius:70% 60%;
-    border-bottom-right-radius:70% 60%;
-    -moz-border-top-left-radius:70% 50%;
-    -moz-border-bottom-right-radius:70% 50%;
+.submitCreate{
+/* position: relative; */
+	
 }
 
-.create-form input {
-    background-color: #43A047;
-    border-radius: 20px;
-    border: none;
-    width: 40%;
-}
+.createContainer{
 
-.create-form h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-/* Nickname */
-.create-form #nickname {
-    margin-top: 20px;
-}
-
-/* Purchase date */
-
-/* Watering frequency */
-
-
-
-/* Add plant button */
-
-.create-form .submit-btn {
-    background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
-    margin-top: 20px;
-    padding: 20px;
-    width: 30%;
-}
-
-.create-form .submit-btn:hover {
-    background-color: red;
 }
