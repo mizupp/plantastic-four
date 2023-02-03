@@ -24,7 +24,6 @@ const filterWord = (word) => {
 }
 
 
-
   return (
     <>
         <form className='search' onSubmit={handleSubmit}>
