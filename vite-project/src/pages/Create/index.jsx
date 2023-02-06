@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import AvatarSelection from "../../components/AvatarSelection";
 import './styles.css'
 
-const Create = ({ avatarSelected }) => {
+const Create = ({ testing} ) => {
 
 const [newPlant, setNewPlant] = useState(null)
 
@@ -53,7 +53,6 @@ return (
                         <AvatarSelection />
                         </div>	
                 </div>
-           
             <div className="createList">
             <h1>Add your plant</h1>
             <div id='nickname' className="input-section">
@@ -74,7 +73,6 @@ return (
             </div>
             </div>
         </form>
-
     </>
     )
 }
