@@ -1,81 +1,38 @@
-// import React, {useState} from "react"
-// import axios from "axios"
-
-
-// function UploadImage() {
-//     const [prediction, setPrediction] = useState("")
-//     const [image, setImage] = useState("")
-
-//   handleFileImage(e){
-
-//   }
-
-//   async function fetchData() {
-//     let PredictData = await axios.get('http://localhost:5000/predict')
-//     console.log(PredictData)
-//     setPrediction(PredictData.data)
-//   }
-
-//   useEffect(() => {
-//     fetchData()
-//   }, [])
-
-
-//     return (
-//       <>
-//       </>
-//     );
-
-    
-
-    
-// }
-
-// export default UploadImage;
-
 
 
 
 // Upload image to check health
 
-import React, {useState} from "react"
+import React from 'react';
 import axios from 'axios';
-import {image1} from "../../assets/img"
 class UploadImage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            imageURL: image1,
+            imageURL: "",
             predict:  "",
         };
         this.handleUploadImage = this.handleUploadImage.bind(this);
         // this.predictData = this.predictData.bind(this);
     }
-
-
-    showImage(e){
-
-    }
-
     
+
+
     handleUploadImage(ev) {
         ev.preventDefault();
         const data = new FormData();
         data.append('file', this.uploadInput.files[0]);
-        this.setState({ 
-          imageURL: this.uploadInput.files[0],
-       });
+        console.log(data);
         fetch('http://localhost:5000/predict', { 
             method: 'POST', 
             body: data 
          }).then((response) => { response.json().then((body) => { 
           //console.log(response.json());
              //console.log(Object.entries(response));
-             console.log(body);
+             console.log(body.file);
              this.setState({ 
-                //  imageURL: `http://localhost:5000/${body.file}`,
-               // imageURL: this.uploadInput.files[0],
-                 predict: body
+                 imageURL: `http://localhost:5000/${body.file}`,
+                 predict: response
              });
            });
          });
@@ -107,10 +64,13 @@ class UploadImage extends React.Component {
             <img src={this.state.imageURL} alt="img" />
 
           </form>  
-          <p> Result: {this.state.predict} </p>
+          {/* <p> Result: {this.state.predict} </p> */}
+          <p> Result :
+          {Object.keys(this.state.predict)}
+
           {/* {Object.entries(this.state.predict)} */}
           {/* {this.predict.map(predict => <div>{predict}</div>)} */}
-
+          </p>
           </>
         );
       }
