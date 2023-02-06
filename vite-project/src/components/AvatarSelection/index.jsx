@@ -1,4 +1,4 @@
-// Avatar selection compoenent
+// Avatar selection component
 import './styles.css'
 
 import React, { useContext, useEffect, useState } from "react"
