@@ -6,6 +6,11 @@ import { logo } from "../../assets/img";
 
 
 const Navbar = ( {displayNav }) => {
+
+    const handleLogout = () => {
+        sessionStorage.clear()
+    }
+
     return (
         <div>
             {displayNav ?
@@ -16,7 +21,7 @@ const Navbar = ( {displayNav }) => {
                         <li><NavLink className='active' to='/shelf'>Shelf</NavLink></li>
                         <li><NavLink className='active' to='/search'>Search</NavLink></li>
                         <li><NavLink className='active' to='/settings'>Settings</NavLink></li>
-                        <li><NavLink className='active' to='/logout'>Logout</NavLink></li>
+                        <li><NavLink className='active' onClick={handleLogout} to='/'>Logout</NavLink></li>
                     </ul>
                 </nav>
             : 

@@ -2,6 +2,7 @@
 
 import React from "react"
 import { useState } from "react"
+import { useSelector } from "react-redux";
 import DatePicker from "react-datepicker";
 import AvatarSelection from "../../components/AvatarSelection";
 import axios from 'axios';
@@ -9,24 +10,23 @@ import './styles.css'
 
 const Create = ({ testing} ) => {
 
-const [newPlant, setNewPlant] = useState(null)
+const avatar = useSelector(state => state.avatar)
 
 const [startDate, setStartDate] = useState(new Date());
 
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Thanks for submitting')
-    console.log(e.target.nickname.value)
-    console.log(e.target.purchase.value)
-    console.log(e.target.watering.value)
-
-    setNewPlant({
+    const newPlant = {
         nickname: e.target.nickname.value,
         purchase_date: e.target.purchase.value,
         water_freq: e.target.watering.value,
-    })
+        plant_data_id: e.target.plant_data_id.value,
+        avatar: avatar
+    }
+    console.log(newPlant)
 
-    createNewPlant(newPlant)
+    // createNewPlant(newPlant)
 
     e.target.nickname.value = '';
     e.target.purchase.value = '';
@@ -34,12 +34,15 @@ const handleSubmit = (e) => {
 }
 
 const createNewPlant = async (newPlant) => {
+    const username = sessionStorage.getItem('username')
     const headers = {
         Authorization : `Bearer ${sessionStorage.getItem('token')}`
     }
-    await axios.post('http://localhost:5000/users/${username}/plants', newPlant, {headers})
+    await axios.post(`http://localhost:5000/users/${username}/plants`, newPlant, {headers})
     // Try and fetch and display all of the users plants data plus this new plant
 }
+
+const [AvatarSelectionOpen, setAvatarSelectionOpen] = useState(true);
 
 return (
     <>

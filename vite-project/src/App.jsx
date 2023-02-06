@@ -15,14 +15,14 @@ function App() {
     <div className='h-screen flex flex-col justify-between'>
     <Navbar />
 	  <Routes>
-            <Route path='/' element={<Layout />}>
+          <Route path='/' element={<Layout />}>
             <Route index element={<LoginRegister />} />
-            <Route path="home" element={<HomePage />} />
-            <Route path="settings" element={ <><Navbar displayNav={true} /> <SettingsPage /> </>} />
-            <Route path="/search" element={<> <Navbar displayNav={true} /> <Search /> </> } />
-            <Route path="/shelf" element={<> <Navbar displayNav={true} /> <Shelf /> </> } />
-            <Route path="/create" element={<> <Navbar displayNav={true} /> <Create /> </> } />
-			      <Route path="*" element={<NotFound />} />
+              <Route exact path="/home" element={<HomePage />} />
+              <Route exact path="/settings" element={ <><Navbar displayNav={true} /> <SettingsPage /> </>} />
+              <Route exact path="/search" element={<> <Navbar displayNav={true} /> <Search /> </> } />
+              <Route exact path="/shelf" element={<> <Navbar displayNav={true} /> <Shelf /> </> } />
+              <Route exact path="/create" element={<> <Navbar displayNav={true} /> <Create /> </> } />
+                <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>    
 	  </div>

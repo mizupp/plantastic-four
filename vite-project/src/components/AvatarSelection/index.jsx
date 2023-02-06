@@ -1,9 +1,6 @@
-// Avatar selection component
-import './styles.css'
-import Create from '../../pages/Create'
-
 import React, { useContext, useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import { storeAvatar } from "../../actions"
 import {
 	image1,
 	image2,
@@ -76,25 +73,19 @@ const AvatarSelection = () => {
 		image32
 	])
 
-	const [selectedAvatar, setSelectedAvatar] = useState({image1});
-	const [testData, setTestData] =useState()
+	const [selectedAvatar, setSelectedAvatar] = useState(image1);
 
 	const onSelect = (a) => {
 		setSelectedAvatar(a)
 		updateAvatar(a)
-		setTestData('Testing link with avatar selection')
 		
 	}
+
 
 	const updateAvatar = (a) => {
-		// const playerInfo = user;
-		// playerInfo.icon = a;
-		// dispatch(updateLocalUser(playerInfo))
-		
+		console.log(a)
+		dispatch(storeAvatar(a))
 	}
-
-	console.log(selectedAvatar)
-	console.log(testData)
 
 	return (
 		<>
