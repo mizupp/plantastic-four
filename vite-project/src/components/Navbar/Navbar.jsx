@@ -11,7 +11,7 @@ const Navbar = ( {displayNav }) => {
             {displayNav ?
                 <nav>
                     <ul>
-                        <li><img src={logo} alt="Logo" height={'20px'} width={'30px'} /></li>
+                        <li><img src='#' alt="Logo" /></li>
                         <li><NavLink className='home-link' to='/'>Home</NavLink></li>
                         <li><NavLink className='active' to='/shelf'>Shelf</NavLink></li>
                         <li><NavLink className='active' to='/search'>Search</NavLink></li>
