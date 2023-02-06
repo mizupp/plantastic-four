@@ -7,7 +7,7 @@ import AvatarSelection from "../../components/AvatarSelection";
 import axios from 'axios';
 import './styles.css'
 
-const Create = () => {
+const Create = ({ testing} ) => {
 
 const [newPlant, setNewPlant] = useState(null)
 
@@ -15,6 +15,10 @@ const [startDate, setStartDate] = useState(new Date());
 
 const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('Thanks for submitting')
+    console.log(e.target.nickname.value)
+    console.log(e.target.purchase.value)
+    console.log(e.target.watering.value)
 
     setNewPlant({
         nickname: e.target.nickname.value,
@@ -44,15 +48,14 @@ return (
         <form onSubmit={handleSubmit} className="create-form" >
                 <div className="avatar">
                         <div className="AvatarSelection">	
-                        <AvatarSelection  />
+                        <AvatarSelection />
                         </div>	
                 </div>
-           
             <div className="createList">
             <h1>Add your plant</h1>
             <div id='nickname' className="input-section">
                 <label htmlFor="nickname"><h3>Nickname</h3></label>
-                <input type="text" name="nickname" className="nickame" required />
+                <input type="text" name="nickname" className="nickname" required />
             </div>
             <div id='date-of-purchase' className="input-section">
                 <label htmlFor="purchase"><h3>Date of purchase</h3></label>
@@ -76,7 +79,6 @@ return (
             </div>
             </div>
         </form>
-
     </>
     )
 }
