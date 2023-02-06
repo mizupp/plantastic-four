@@ -77,10 +77,12 @@ const AvatarSelection = () => {
 	])
 
 	const [selectedAvatar, setSelectedAvatar] = useState({image1});
+	const [testData, setTestData] =useState()
 
 	const onSelect = (a) => {
 		setSelectedAvatar(a)
 		updateAvatar(a)
+		setTestData('Testing link with avatar selection')
 		
 	}
 
@@ -91,28 +93,34 @@ const AvatarSelection = () => {
 		
 	}
 
+	console.log(selectedAvatar)
+	console.log(testData)
+
 	return (
-		<div className='avatar-selection'>
-			<div className="flex flex-col items-center  gap-2 bg-#43A047-200 rounded-lg p-2 drop-shadow-lg text-black">
-				<div className='title'>Please choose your plant's avatar:</div>
-				<div className="grid  grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2 text-6xl">
-					{avatars.map((a, i) => (
-						<img
-						// onLoad={onLoad}
-							src={a}
-							id={a}
-							key={i}
-							placeholder={image2}
-							className={`h-20 w-20 ${
-								a == selectedAvatar ? "opacity-20" : "opacity-100"
-							}`}
-							onClick={() => onSelect(a)}
-						/>
-					))}
-					<Create avatarSelected ={selectedAvatar} />
+		<>
+			<div className='avatar-selection'>
+				<div className="flex flex-col items-center  gap-2 bg-#43A047-200 rounded-lg p-2 drop-shadow-lg text-black">
+					<div className='title'>Please choose your plant's avatar:</div>
+					<div className="grid  grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2 text-6xl">
+						{avatars.map((a, i) => (
+							<>
+							<img
+							// onLoad={onLoad}
+								src={a}
+								id={a}
+								key={i}
+								placeholder={image2}
+								className={`h-20 w-20 ${
+									a == selectedAvatar ? "opacity-20" : "opacity-100"
+								}`}
+								onClick={() => onSelect(a)}
+							/>
+							</>
+						))}
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 
