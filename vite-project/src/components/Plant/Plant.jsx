@@ -6,6 +6,7 @@ const Plant = ({ plant }) => {
         <>
             <article>
                 <h2>{plant.name}</h2>
+                {/* We can add other details here to display */}
             </article>
         </>
     )

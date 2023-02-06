@@ -9,9 +9,6 @@ import './styles.css'
 const Create = () => {
 
 const [newPlant, setNewPlant] = useState(null)
-const [nickname, setNickname] = useState(null);
-const [purchase_date, setPurchaseDate] = useState(null);
-const [water_freq, setWaterFreq] = useState(null);
 
 const [startDate, setStartDate] = useState(new Date());
 

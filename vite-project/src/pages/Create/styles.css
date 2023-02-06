@@ -48,6 +48,16 @@
     margin-bottom: 20px;
 }
 
+.createList{
+    flex-direction: row;
+     height: 400px;
+     width: 400px;
+     position: absolute;
+     right:100px;
+     top:0px;
+    }
+    
+
 /* NICKNAME*/
 
 .create-form #nickname {
@@ -62,10 +72,15 @@
 /* ADD PLANT BUTTON */
 
 .create-form .submit-btn {
-    background: #43A047;
+    background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
     margin-top: 20px;
     padding: 20px;
     width: 30%;
+    margin-top: -10px;
+    border-top-left-radius:70% 60%;
+    border-bottom-right-radius:70% 60%;
+    -moz-border-top-left-radius:70% 50%;
+    -moz-border-bottom-right-radius:70% 50%;
 }
 
 
@@ -75,12 +90,4 @@
     width: 40%; 
 }
 
-.createList{
-flex-direction: row;
- height: 400px;
- width: 400px;
- position: absolute;
- right:100px;
- top:50px;
-}
 

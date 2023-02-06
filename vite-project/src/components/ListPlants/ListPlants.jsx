@@ -1,3 +1,5 @@
+// List plant search result component
+
 import React from 'react'
 import Plant from '../Plant/Plant';
 

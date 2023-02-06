@@ -3,20 +3,13 @@
 import React, { useEffect } from "react"
 import { useState} from "react"
 import SearchBar from "../../components/SearchBar"
-import ListPlants from "../../components/ListPlants"
+import ListPlants from "../../components/ListPlants/ListPlants"
 import axios from 'axios'
 import './styles.css'
 
-// Some dummy data to test functionality before we connect to database
-
-// This can be replaced by a fetchPlantData function
-const plants = [
-
-]
-
-
 const Search = () => {
 
+// Some dummy data to test functionality before we connect to database
 const [plants, setPlants] = useState([ 
     {
         id: 1,
