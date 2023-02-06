@@ -3,7 +3,7 @@
 import React, { useEffect } from "react"
 import { useState} from "react"
 import SearchBar from "../../components/SearchBar"
-import ListPlants from "../../components/ListPlants/ListPlants"
+import SearchListPlants from "../../components/SearchListPlants/SearchListPlants"
 import Grass from "../../components/Grass"
 import LoadingPlant from "../../components/LoadingPlant"
 import axios from 'axios'
@@ -75,17 +75,6 @@ const [plants, setPlants] = useState([])
 const [searchResults, setSearchResults] = useState([])
 const [loading, setLoading] = useState(true)
 
-// When we have a getPlant component to fetch plant data
-
-// useEffect(() => {
-//     getPlants().then(json => {
-//         setPlants(json)
-//         return json
-//     }).then(json => {
-//         setSearchResults(json)
-//     })
-// })
-
 
 async function loadPlants () {
     const headers = {
@@ -93,12 +82,17 @@ async function loadPlants () {
     }
     setLoading(true)
     const data = await axios.get("http://localhost:5000/plants", {headers})
+    .then(json => {
+        setPlants(json)
+        return json
+    })
+    .then(json => {
+        setSearchResults(json)
+    })
     console.log(data);
-     setPlants(data)
-    setSearchResults(data)
 }
 
-useEffect(() => {http://localhost:5000/plants
+useEffect(() => {
     loadPlants()
 }, [])
 
@@ -107,13 +101,13 @@ console.log(plants)
     return (
         <div className="search-page">
             <h1>Search Page</h1>
-            { loading? <p>Loading.....</p> :
+            { loading? <p>Loading...</p> :
                 <>
                     <div className="search-bar">
                         <SearchBar plants={plants} setSearchResults= {setSearchResults} />
                     </div>
                     <div className="search-list">
-                        <ListPlants searchResults={searchResults} />
+                        <SearchListPlants searchResults={searchResults} />
                     </div>
                 </>
             }
