@@ -1,5 +1,6 @@
 import React from "react"
 import "./style.css"
+import axios from 'axios'
 const LoginRegister = () => {
 
 
@@ -437,6 +438,17 @@ function loop(f) {
 
 loop();
 
+const handleLogin = async (e) => {
+  e.preventDefault()
+  const details = {
+    username: e.target.form.elements[0].value,
+    password: e.target.form.elements[1].value
+  }
+  await axios.post('http://localhost:5000/login', details)
+  .then(response => console.log(response))
+
+}
+
 
 return (
     <>
@@ -461,7 +473,7 @@ return (
           <form className="login-form">
             <input type="text" placeholder="username" />
             <input type="password" placeholder="password" />
-            <button>login</button>
+            <button onClick={handleLogin}>login</button>
             <p className="message">Not registered? <a href="#">Create an account</a></p>
           </form>
         </div>
