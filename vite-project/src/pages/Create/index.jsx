@@ -1,9 +1,11 @@
+// Create page
+
 import React from "react"
 import { useState } from "react"
 import DatePicker from "react-datepicker";
 import AvatarSelection from "../../components/AvatarSelection";
 import './styles.css'
-import './index.css'
+
 const Create = () => {
 
 const [newPlant, setNewPlant] = useState(null)

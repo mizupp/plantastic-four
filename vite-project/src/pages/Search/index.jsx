@@ -92,7 +92,7 @@ useEffect(() => {
 console.log(plants)
 
     return (
-        <div>
+        <div className="search-page">
             <h1>Search Page</h1>
             <SearchBar plants={plants} setSearchResults= {setSearchResults} />
             <ListPlants searchResults={searchResults} />

@@ -1,34 +1,78 @@
 /* Create page styling */
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
-/* .createContainer {
-	display: grid;
-	grid-template-areas:
-		"avatar create create"
-		"avatar create create"
-		"avatar create create"
-		"avatar create submit";
-	justify-items: center;
+.create-form {
+    background-color: #43A047;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 700;
+    display: grid;
+    height: 80vh;
+    width: 100vh;
+    text-align: center;
+    position: relative;
+    
 }
 
-.AvatarSelection {
-	grid-area: avatar;
+/* HEADING */
+.create-form h1 {
+    font-size: 2.5rem;
+    padding: 20px;
+    font-family: 'Fredericka the Great', cursive;
 }
 
-.createList {
-	grid-area: create;
+
+/* STYLING ALL */
+
+.create-form .input-section {
+    background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+    margin-bottom: 20px;
+    padding: 40px;
+    border-top-left-radius:70% 60%;
+    border-bottom-right-radius:70% 60%;
+    -moz-border-top-left-radius:70% 50%;
+    -moz-border-bottom-right-radius:70% 50%;
 }
 
-.submitCreate {
-	grid-area: submit;
+.create-form input {
+    background-color: #43A047;
+    border-radius: 20px;
+    border: none;
+    width: 50%;
+    
 }
- */
 
- .AvatarSelection {
-    /* position: absolute;
-	right: 5vw;
-    top:10%; */
+.create-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
 
+/* NICKNAME*/
+
+.create-form #nickname {
+    margin-top: 20px;
+}
+
+/* WATERING FREQUENCY */
+.react-datepicker__tab-loop {
+    visibility: hidden;
+}
+
+/* ADD PLANT BUTTON */
+
+.create-form .submit-btn {
+    background: #43A047;
+    margin-top: 20px;
+    padding: 20px;
+    width: 30%;
+}
+
+
+/* AVATAR STYLING */
+
+.create-form .avatar {
+    width: 40%; 
 }
 
 .createList{
@@ -40,11 +84,3 @@ flex-direction: row;
  top:50px;
 }
 
-.submitCreate{
-/* position: relative; */
-	
-}
-
-.createContainer{
-
-}

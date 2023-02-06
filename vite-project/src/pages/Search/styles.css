@@ -1,0 +1,12 @@
+/* Search page styling */
+
+.search-page {
+    background-color: #43A047;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 700;    
+    padding: 100px;
+    border-top-left-radius:70% 60%;
+    border-bottom-right-radius:70% 60%;
+    -moz-border-top-left-radius:70% 50%;
+    -moz-border-bottom-right-radius:70% 50%;
+}
