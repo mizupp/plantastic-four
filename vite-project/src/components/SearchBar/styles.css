@@ -1,0 +1,8 @@
+/* Search bar component styling */
+
+.search-bar-comp input {
+    background-color: rgba(141,194,111,1);
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.css'
 
 const SearchBar = ({plants, setSearchResults }) => {
 const handleSubmit = (e) => e.preventDefault()
@@ -25,7 +26,7 @@ const filterWord = (word) => {
 
 
   return (
-    <>
+    <div className='search-bar-comp'>
         <form className='search' onSubmit={handleSubmit}>
         <input className='search-input'
         type="text"
@@ -34,7 +35,7 @@ const filterWord = (word) => {
         onChange={handleSearchChange} />
         <button className='search-btn' />
         </form>
-    </>
+    </div>
   )
 }
 

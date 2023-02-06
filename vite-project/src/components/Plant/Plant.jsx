@@ -6,8 +6,6 @@ const Plant = ({ plant }) => {
         <>
             <article>
                 <h2>{plant.name}</h2>
-                <p>{plant.mintemp}</p>
-                <p>{plant.id}</p>
             </article>
         </>
     )
