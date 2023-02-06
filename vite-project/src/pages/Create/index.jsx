@@ -4,6 +4,7 @@ import React from "react"
 import { useState } from "react"
 import DatePicker from "react-datepicker";
 import AvatarSelection from "../../components/AvatarSelection";
+import axios from 'axios';
 import './styles.css'
 
 const Create = () => {
@@ -29,13 +30,10 @@ const handleSubmit = (e) => {
 }
 
 const createNewPlant = async (newPlant) => {
-    const options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newPlant)
+    const headers = {
+        Authorization : `Bearer ${sessionStorage.getItem('token')}`
     }
+    await axios.post('http://localhost:5000/users/${username}/plants', newPlant, {headers})
     // Try and fetch and display all of the users plants data plus this new plant
 }
 
@@ -64,6 +62,14 @@ return (
             <div id='watering-frequency' className="input-section">
                 <label htmlFor="watering"><h3>Please choose watering frequency (per month)</h3></label>
                 <input type="text" name="watering" className="watering" />
+            </div>
+            <div id='plant-type' className="input-section">
+                <label htmlFor="plant_data_id"><h3>Plant Type</h3></label>
+                <select name="plant_data_id">
+                    <option value="41">Plant 1</option>
+                    <option value="42">Plant 2</option>
+                    <option value="43">Plant 3</option>
+                </select>
             </div>
             <div className="submitCreate">
                 <input type="submit" className="submit-btn" value='Add plant' required/>

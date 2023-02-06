@@ -1,6 +1,9 @@
 import React from "react"
 import "./style.css"
 import axios from 'axios'
+import {redirect} from 'react-router-dom'
+import { useState } from "react"
+
 const LoginRegister = () => {
 
 
@@ -438,14 +441,33 @@ function loop(f) {
 
 loop();
 
+const [login, setLogin] = useState(true);
+
 const handleLogin = async (e) => {
   e.preventDefault()
+  const username = e.target.form.elements[0].value
+  const password = e.target.form.elements[1].value
   const details = {
-    username: e.target.form.elements[0].value,
-    password: e.target.form.elements[1].value
+    username: username,
+    password: password
   }
   await axios.post('http://localhost:5000/login', details)
-  .then(response => console.log(response))
+  .then(response => sessionStorage.setItem('token', response.data.access_token),
+        sessionStorage.setItem('username', username))
+  .catch(error => console.log('Invalid Credentials'))
+}
+
+const handleRegister = async (e) => {
+  e.preventDefault()
+
+  const details = {
+    username: e.target.form.elements[0].value,
+    email: e.target.form.elements[1].value,
+    password: e.target.form.elements[2].value
+  }
+  await axios.post('http://localhost:5000/register', details)
+  .then(setLogin(true))
+  .catch(error => console.log('Invalid Credentials'))
 
 }
 
@@ -463,19 +485,20 @@ return (
         </text>
       </svg>
         <div className="form">
-          <form className="register-form">
-            <input type="text" placeholder="name" />
-            <input type="password" placeholder="password" />
-            <input type="text" placeholder="email address" />
-            <button>create</button>
-            <p className="message">Already registered? <a href="#">Sign In</a></p>
-          </form>
-          <form className="login-form">
-            <input type="text" placeholder="username" />
-            <input type="password" placeholder="password" />
-            <button onClick={handleLogin}>login</button>
-            <p className="message">Not registered? <a href="#">Create an account</a></p>
-          </form>
+          {
+            login ? <form className="login-form">
+              <input type="text" placeholder="username" />
+              <input type="password" placeholder="password" />
+              <button onClick={handleLogin}>login</button>
+              <p className="message">Not registered? <a href="#" onClick={() => setLogin(false)}>Create an account</a></p>
+            </form> :<form className="register-form">
+              <input type="text" placeholder="name" />
+              <input type="text" placeholder="email address" />
+              <input type="password" placeholder="password" />
+              <button>create</button>
+              <p className="message">Already registered? <a href="#" onClick={() => setLogin(true)}>Sign In</a></p>
+            </form>
+          }
         </div>
       </div>
     </>
