@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import AvatarSelection from "../../components/AvatarSelection";
 import './styles.css'
 
-const Create = () => {
+const Create = ({ avatarSelected }) => {
 
 const [newPlant, setNewPlant] = useState(null)
 

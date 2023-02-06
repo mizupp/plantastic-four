@@ -1,5 +1,6 @@
 // Avatar selection component
 import './styles.css'
+import Create from '../../pages/Create'
 
 import React, { useContext, useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
@@ -108,6 +109,7 @@ const AvatarSelection = () => {
 							onClick={() => onSelect(a)}
 						/>
 					))}
+					<Create avatarSelected ={selectedAvatar} />
 				</div>
 			</div>
 		</div>
