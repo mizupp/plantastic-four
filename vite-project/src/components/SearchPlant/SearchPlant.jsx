@@ -2,21 +2,27 @@
 // Creates an article of each plant
 
 const SearchPlant = ({ plant }) => {
-    return (
-        <>
-            <article>
-                <h2>{plant.names}</h2>
-                <h2>{plant.latin_name}</h2>
+  return (
+    <>
+      <article>
+        <h2>
+          {plant.names
+            .replace("{", "")
+            .replace("}", "")
+            .replace(/"/g, "")
+            .replace(",", ", ")}
+        </h2>
+        {/* <h2>{plant.latin_name}</h2>
                 <h2>{plant.ideal_light}</h2>
                 <h2>{plant.watering}</h2>
                 <h2>{plant.watering}</h2>
                 <h2>{plant.origin}</h2>
                 <h2>{plant.climate}</h2>
-                <h2>{plant.soil}</h2>
-                {/* We can add other details here to display */}
-            </article>
-        </>
-    )
+                <h2>{plant.soil}</h2> */}
+        {/* We can add other details here to display */}
+      </article>
+    </>
+  );
 };
 
 export default SearchPlant;
