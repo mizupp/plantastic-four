@@ -1,10 +1,12 @@
-import React from 'react'
-import axios from 'axios'
+import React from 'react';
+import axios from 'axios';
+
 import { redirect } from 'react-router-dom'
 
 const DeleteAccount = () => {
 
     const handleDelete = () => {
+        console.log('Clicked')
         async function getAccountId () {
             const accountId = await axios.get("http://localhost:5000/users")
             try {
@@ -22,13 +24,14 @@ const DeleteAccount = () => {
 
             }
         }
+        getAccountId()
     }
     return (
-        <>
+        <div className='delete-account'>
             <label htmlFor='delete-btn'>Delete Account</label>
             <button onClick={handleDelete} />
-            <input type='button' name='delete-btn' onClick={handleDelete}/>
-        </>
+            <input type='button' name='delete-btn' value='Delete Account' onClick={handleDelete}/>
+        </div>
     )
 };
 
