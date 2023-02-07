@@ -1,120 +1,41 @@
 import React from "react";
-import Card from '../Card';
 import './index.css';
+import { useDispatch } from "react-redux";
+import { storePlant } from "../../actions";
+import { useNavigate } from "react-router-dom";
 
-const PlantInfo = () => {
+const PlantInfo = ({results}) => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const names = results.names
+  .replace("{", "")
+  .replace("}", "")
+  .replace(/"/g, "")
+  .replace(",", ", ")
+
+  const handleAdd = () => {
+    const plant = {
+      name: names,
+      id: results.id
+    }
+    dispatch(storePlant(plant))
+    navigate('/create')
+  }
+
+
   return (
     <div className="plant-info">
-        <Card
-          imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-with-pot-in-outdoor-succulent__0614211_pe686835_s5.jpg?f=s"
-          title="IKEA1"
-          body="Keyframe comes this is a sample body text for testing of my card component"
-          carWidth={300}
-          imageHeight={300}
-        />
-        <Card
-          imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-monstera__0614197_pe686822_s5.jpg?f=xl"
-          title="IKEA2"
-          body="This is a sample body text for testing of my card component"
-          carWidth={300}
-          imageHeight={300}
-        />
-        <Card
-          imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-grass__0130933_pe285358_s5.jpg"
-          title="IKEA3"
-          body="This is a sample body text for testing of my card component"
-          carWidth={300}
-          imageHeight={300}
-        />
-        <Card
-          imageUrl="https://www.ikea.com/gb/en/images/products/dracaena-massangeana-potted-plant-dom-plant-2-stem__0654003_pe708232_s5.jpg?f=s"
-          title="IKEA4"
-          body="I don't speak Plant"
-          carWidth={300}
-          imageHeight={300}
-        />        <Card
-        imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-with-pot-in-outdoor-succulent__0614211_pe686835_s5.jpg?f=s"
-        title="IKEA1"
-        body="Keyframe comes this is a sample body text for testing of my card component"
-        carWidth={300}
-        imageHeight={300}
-      />
-      <Card
-        imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-monstera__0614197_pe686822_s5.jpg?f=xl"
-        title="IKEA2"
-        body="This is a sample body text for testing of my card component"
-        carWidth={300}
-        imageHeight={300}
-      />
-      <Card
-        imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-grass__0130933_pe285358_s5.jpg"
-        title="IKEA3"
-        body="This is a sample body text for testing of my card component"
-        carWidth={300}
-        imageHeight={300}
-      />
-      <Card
-        imageUrl="https://www.ikea.com/gb/en/images/products/dracaena-massangeana-potted-plant-dom-plant-2-stem__0654003_pe708232_s5.jpg?f=s"
-        title="IKEA4"
-        body="I don't speak Plant"
-        carWidth={300}
-        imageHeight={300}
-      />        <Card
-      imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-with-pot-in-outdoor-succulent__0614211_pe686835_s5.jpg?f=s"
-      title="IKEA1"
-      body="Keyframe comes this is a sample body text for testing of my card component"
-      carWidth={300}
-      imageHeight={300}
-    />
-    <Card
-      imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-monstera__0614197_pe686822_s5.jpg?f=xl"
-      title="IKEA2"
-      body="This is a sample body text for testing of my card component"
-      carWidth={300}
-      imageHeight={300}
-    />
-    <Card
-      imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-grass__0130933_pe285358_s5.jpg"
-      title="IKEA3"
-      body="This is a sample body text for testing of my card component"
-      carWidth={300}
-      imageHeight={300}
-    />
-    <Card
-      imageUrl="https://www.ikea.com/gb/en/images/products/dracaena-massangeana-potted-plant-dom-plant-2-stem__0654003_pe708232_s5.jpg?f=s"
-      title="IKEA4"
-      body="I don't speak Plant"
-      carWidth={300}
-      imageHeight={300}
-    />        <Card
-    imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-with-pot-in-outdoor-succulent__0614211_pe686835_s5.jpg?f=s"
-    title="IKEA1"
-    body="Keyframe comes this is a sample body text for testing of my card component"
-    carWidth={300}
-    imageHeight={300}
-  />
-  <Card
-    imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-monstera__0614197_pe686822_s5.jpg?f=xl"
-    title="IKEA2"
-    body="This is a sample body text for testing of my card component"
-    carWidth={300}
-    imageHeight={300}
-  />
-  <Card
-    imageUrl="https://www.ikea.com/gb/en/images/products/fejka-artificial-potted-plant-in-outdoor-grass__0130933_pe285358_s5.jpg"
-    title="IKEA3"
-    body="This is a sample body text for testing of my card component"
-    carWidth={300}
-    imageHeight={300}
-  />
-  <Card
-    imageUrl="https://www.ikea.com/gb/en/images/products/dracaena-massangeana-potted-plant-dom-plant-2-stem__0654003_pe708232_s5.jpg?f=s"
-    title="IKEA4"
-    body="I don't speak Plant"
-    carWidth={300}
-    imageHeight={300}
-  />
+      {results &&
+      
+      <div>
+        <h2>{names}</h2>
+            <p>{results.latin_name}</p>
+            <button onClick={handleAdd}>Add Plant</button>
       </div>
+      
+      }  
+    </div>
   );
 };
 

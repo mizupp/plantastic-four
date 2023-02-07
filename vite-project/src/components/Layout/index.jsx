@@ -7,7 +7,7 @@ const Layout = () => {
     return (
         <>
             
-                <main className='h-full flex flex-col justify-evenly'><Outlet /></main>
+                <main className='h-full w-full flex flex-col justify-evenly'><Outlet /></main>
          
         </>
     )

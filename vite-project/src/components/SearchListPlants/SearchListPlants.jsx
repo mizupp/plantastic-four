@@ -1,25 +1,22 @@
 // List plant search result component
 
 import React from "react";
+import { useState } from "react";
 import SearchPlant from "../SearchPlant/SearchPlant";
 
-const SearchListPlants = ({ searchResults }) => {
-  const result = searchResults.map((plant) => (
-    <SearchPlant key={plant.id} plant={plant} return />
-  ));
+const SearchListPlants = ({ getPlant, searchResults }) => {
+  const handleClick = (plant) => {
+    getPlant(plant);
+  };
 
-  const content = result?.length ? (
-    result
-  ) : (
-    <article>
-      <p>No matching Plants</p>
-    </article>
-  );
+  console.log(searchResults);
 
   return (
-    <div>
-      <h3>{content}</h3>
-    </div>
+    <>
+      {searchResults.map((plant, i) => {
+        return <SearchPlant handleClick={handleClick} plant={plant} key={i} />;
+      })}
+    </>
   );
 };
 
