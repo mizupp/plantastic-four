@@ -1,4 +1,4 @@
-
+/* Plant Card styling */
 
 .card {
   display: flex;
@@ -7,8 +7,6 @@
   grid-row-gap: 0px;
   /* border: 10px solid #ccc; */
   border-radius: 10px;
-
-
 }
 .card-image {
   border-top-right-radius: inherit;
@@ -26,8 +24,8 @@
   padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
-  color: rgb(157, 14, 14);
-  background-color: black;
+  color: black;
+  background-color: #43a047;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -41,17 +39,16 @@
 }
 
 .card-content p {
- color: white;
-
+  color: white;
 }
 
-.shelf{
+.shelf {
   height: 50px;
   width: 100%;
-  background-color: #512c04;
-  background-image: url("../../assets/img/seamlesswood.jpg");
+  background-color: rgb(164, 116, 73);
+  /* background-image: url("../../assets/img/seamlesswood.jpg");
   -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
-  mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+  mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");  */
   /* -webkit-mask-image: url("../../assets/img/seamlesswood.jpg");
   mask-image: url("../../assets/img/seamlesswood.jpg"); */
 }

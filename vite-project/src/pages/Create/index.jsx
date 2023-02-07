@@ -7,30 +7,36 @@ import DatePicker from "react-datepicker";
 import AvatarSelection from "../../components/AvatarSelection";
 import axios from 'axios';
 import './styles.css'
+import {  useNavigate } from "react-router-dom";
 
 const Create = ({ testing} ) => {
 
+const navigate = useNavigate()
+
 const avatar = useSelector(state => state.avatar)
+const plant = useSelector(state => state.plant)
 
 const [startDate, setStartDate] = useState(new Date());
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Thanks for submitting')
     const newPlant = {
         nickname: e.target.nickname.value,
         purchase_date: e.target.purchase.value,
         water_freq: e.target.watering.value,
-        plant_data_id: e.target.plant_data_id.value,
-        avatar: avatar
+        plant_data_id: plant.id,
+        // avatar: avatar
     }
     console.log(newPlant)
 
-    // createNewPlant(newPlant)
+    await createNewPlant(newPlant)
 
     e.target.nickname.value = '';
     e.target.purchase.value = '';
     e.target.watering.value ='';
+
+    navigate("/shelf")
 }
 
 const createNewPlant = async (newPlant) => {
@@ -66,16 +72,12 @@ return (
                 
             </div>
             <div id='watering-frequency' className="input-section">
-                <label htmlFor="watering"><h3>Please choose watering frequency (per month)</h3></label>
+                <label htmlFor="watering"><h3>Please choose watering frequency</h3></label>
                 <input type="text" name="watering" className="watering" />
             </div>
             <div id='plant-type' className="input-section">
-                <label htmlFor="plant_data_id"><h3>Plant Type</h3></label>
-                <select name="plant_data_id">
-                    <option value="41">Plant 1</option>
-                    <option value="42">Plant 2</option>
-                    <option value="43">Plant 3</option>
-                </select>
+                <label><h3>Plant Type</h3></label>
+                <h3>{plant.name}</h3>
             </div>
             <div className="submitCreate">
                 <input type="submit" className="submit-btn" value='Add plant' required/>

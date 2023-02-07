@@ -1,34 +1,66 @@
+export { default as logo } from "./logo.png";
+// export { default as image1 } from "./1.png";
+// export { default as image2 } from "./2.png";
+// export { default as image3 } from "./3.png";
+// export { default as image4 } from "./4.png";
+// export { default as image5 } from "./5.png";
+// export { default as image6 } from "./6.png";
+// export { default as image7 } from "./7.png";
+// export { default as image8 } from "./8.png";
+// export { default as image9 } from "./9.png";
+// export { default as image10 } from "./10.png";
+// export { default as image11 } from "./11.png";
+// export { default as image12 } from "./12.png";
+// export { default as image13 } from "./13.png";
+// export { default as image14 } from "./14.png";
+// export { default as image15 } from "./15.png";
+// export { default as image16 } from "./16.png";
+// export { default as image17 } from "./17.png";
+// export { default as image18 } from "./18.png";
+// export { default as image19 } from "./19.png";
+// export { default as image20 } from "./20.png";
+// export { default as image21 } from "./21.png";
+// export { default as image22 } from "./22.png";
+// export { default as image23 } from "./23.png";
+// export { default as image24 } from "./24.png";
+// export { default as image25 } from "./25.png";
+// export { default as image26 } from "./26.png";
+// export { default as image27 } from "./27.png";
+// export { default as image28 } from "./28.png";
+// export { default as image29 } from "./29.png";
+// export { default as image30 } from "./30.png";
+// export { default as image31 } from "./31.png";
+// export { default as image32 } from "./32.png";
 
-export { default as logo } from "./logo.png"
-export { default as image1 } from "./1.png"
-export { default as image2 } from "./2.png"
-export { default as image3 } from "./3.png"
-export { default as image4 } from "./4.png"
-export { default as image5 } from "./5.png"
-export { default as image6 } from "./6.png"
-export { default as image7 } from "./7.png"
-export { default as image8 } from "./8.png"
-export { default as image9 } from "./9.png"
-export { default as image10 } from "./10.png"
-export { default as image11 } from "./11.png"
-export { default as image12 } from "./12.png"
-export { default as image13 } from "./13.png"
-export { default as image14 } from "./14.png"
-export { default as image15 } from "./15.png"
-export { default as image16 } from "./16.png"
-export { default as image17 } from "./17.png"
-export { default as image18 } from "./18.png"
-export { default as image19 } from "./19.png"
-export { default as image20 } from "./20.png"
-export { default as image21 } from "./21.png"
-export { default as image22 } from "./22.png"
-export { default as image23 } from "./23.png"
-export { default as image24 } from "./24.png"
-export { default as image25 } from "./25.png"
-export { default as image26 } from "./26.png"
-export { default as image27 } from "./27.png"
-export { default as image28 } from "./28.png"
-export { default as image29 } from "./29.png"
-export { default as image30 } from "./30.png"
-export { default as image31 } from "./31.png"
-export { default as image32 } from "./32.png"
+export { default as image33 } from "./33.png";
+export { default as image34 } from "./34.png";
+export { default as image35 } from "./35.png";
+export { default as image36 } from "./36.png";
+export { default as image37 } from "./37.png";
+export { default as image38 } from "./38.png";
+export { default as image39 } from "./39.png";
+export { default as image40 } from "./40.png";
+export { default as image41 } from "./41.png";
+export { default as image42 } from "./42.png";
+export { default as image43 } from "./43.png";
+export { default as image44 } from "./44.png";
+export { default as image45 } from "./45.png";
+export { default as image46 } from "./46.png";
+export { default as image47 } from "./47.png";
+export { default as image48 } from "./48.png";
+export { default as image49 } from "./49.png";
+export { default as image50 } from "./50.png";
+export { default as image51 } from "./51.png";
+export { default as image52 } from "./52.png";
+export { default as image53 } from "./53.png";
+export { default as image54 } from "./54.png";
+export { default as image55 } from "./55.png";
+export { default as image56 } from "./56.png";
+export { default as image57 } from "./57.png";
+export { default as image58 } from "./58.png";
+export { default as image59 } from "./59.png";
+export { default as image60 } from "./60.png";
+export { default as image61 } from "./61.png";
+export { default as image62 } from "./62.png";
+export { default as image63 } from "./63.png";
+export { default as image64 } from "./64.png";
