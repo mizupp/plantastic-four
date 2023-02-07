@@ -1,38 +1,40 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
+import "./styles.css";
 
-import { redirect } from 'react-router-dom'
+import { redirect, useNavigate } from "react-router-dom";
 
 const DeleteAccount = () => {
+  const navigate = useNavigate();
 
-    const handleDelete = () => {
-        console.log('Clicked')
-        async function getAccountId () {
-            const accountId = await axios.get("http://localhost:5000/users")
-            try {
-                delOptions = {
-                    method: "DELETE",
-                    headers: {
-                        Authorization: `Bearer ${sessionStorage.getItem('token')}`
-                    }
-                }
-                const response = await axios.get("http://localhost:5000/users/{accountId}", {delOptions});
-                return <Redirect to='/' />
-            }
-            catch (err) {
-                console.log(err)
+  async function handleDelete() {
+    const username = sessionStorage.getItem("username");
+    try {
+      const headers = {
+        Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+      };
 
-            }
-        }
-        getAccountId()
+      const response = await axios.delete(
+        `http://localhost:5000/users/${username}`,
+        { headers }
+      );
+      return navigate("/login");
+    } catch (err) {
+      console.log(err);
     }
-    return (
-        <div className='delete-account'>
-            <label htmlFor='delete-btn'>Delete Account</label>
-            <button onClick={handleDelete} />
-            <input type='button' name='delete-btn' value='Delete Account' onClick={handleDelete}/>
-        </div>
-    )
+  }
+
+  return (
+    <div className="delete-account">
+      <button onClick={handleDelete} />
+      <input
+        type="button"
+        name="delete-btn"
+        value="Delete Account"
+        onClick={handleDelete}
+      />
+    </div>
+  );
 };
 
 export default DeleteAccount;

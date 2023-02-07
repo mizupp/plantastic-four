@@ -69,27 +69,30 @@ const Search = () => {
 
   const [plants, setPlants] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  async function loadPlants() {
-    const headers = {
-      Authorization: `Bearer ${sessionStorage.getItem("token")}`,
-    };
-    const resp = await axios.get("http://localhost:5000/plants", { headers });
-    console.log(resp.data);
-    setSearchResults(resp.data);
-  }
+  //   async function loadPlants() {
+  //     const headers = {
+  //       Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+  //     };
+  //     const resp = await axios.get("http://localhost:5000/plants", { headers });
+  //     console.log(resp.data);
+  //     setSearchResults(resp.data);
+  //   }
 
-  useEffect(() => {
-    setLoading(true);
-    loadPlants();
-    setLoading(false);
-  }, []);
+  //   useEffect(() => {
+  //     setLoading(true);
+  //     loadPlants();
+  //     setLoading(false);
+  //   }, []);
 
   console.log(plants);
 
   const loadResults = (results) => {
     console.log(results);
+    setLoading(true);
+    setSearchResults(results);
+    setLoading(false);
   };
 
   return (
