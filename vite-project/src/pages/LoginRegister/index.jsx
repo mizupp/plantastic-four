@@ -21,12 +21,26 @@ const handleLogin = async (e) => {
   }
   await axios.post('http://localhost:5000/login', details)
     .then(response => {
-        sessionStorage.setItem('token', response.data.access_token),
-        sessionStorage.setItem('username', username)})
-    .then(navigate('/home'))
+        sessionStorage.setItem('token', response.data.access_token)
+        sessionStorage.setItem('username', username)
+        // remove()
+        navigate('/home')
+        // document.body.removeChild(canvas)
+        // document.body.removeElement(canvas)
+    })
     .catch(error => console.log('Invalid Credentials'))
-   
+    
 }
+
+// const remove= () => {
+//   document.body.removeElement(canvas)
+//  const canvasmain=  document.getElementsByClassName("canvas-main")
+//  canvasmain.removeElement()
+//   // let canvas = document.createElement("canvas"),
+//   // ctx = canvas.getContext("2d"),
+//   // W,
+//   // H;
+// }
 
 const handleRegister = async (e) => {
   e.preventDefault()
@@ -45,6 +59,7 @@ const handleRegister = async (e) => {
 
 return (
     <>
+    {/* <Canvas className="canvas-home"> */}
     {/* <PlantBackground /> */}
         <div id="login-page" className="login-page">
           {/* <p id="plantintologin">House your plant doing?</p> */}
@@ -73,6 +88,7 @@ return (
           }
         </div>
       </div>
+      {/* </Canvas> */}
     </>
 )
 }
