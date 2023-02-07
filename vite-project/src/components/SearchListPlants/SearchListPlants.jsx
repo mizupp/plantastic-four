@@ -12,7 +12,7 @@ const SearchListPlants = ({ searchResults }) => {
     result
   ) : (
     <article>
-      <p>No matching Plants, soz</p>
+      <p>No matching Plants</p>
     </article>
   );
 
