@@ -8,8 +8,6 @@ import { useNavigate } from "react-router-dom"
 
 const LoginRegister = () => {
 
-
-
 const [login, setLogin] = useState(true);
 const navigate = useNavigate()
 

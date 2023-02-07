@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react"
 import Layout from "./components/layout"
 import "./App.css"
 import { Routes, Route, Outlet, Link, NavLink } from "react-router-dom"
-import { HomePage, NotFound, Create, Search, Shelf, LoginRegister, Prediction} from "./pages";
+import { HomePage, NotFound, Create, Search, Shelf, LoginRegister, Prediction, Settings} from "./pages";
 import Navbar from "./components/Navbar/Navbar"
 
 import "./back.styl"
@@ -22,6 +22,7 @@ function App() {
               <Route exact path="/search" element={<> <Navbar displayNav={true} /> <Search /> </> } />
               <Route exact path="/shelf" element={<> <Navbar displayNav={true} /> <Shelf /> </> } />
               <Route exact path="/create" element={<> <Navbar displayNav={true} /> <Create /> </> } />
+              <Route exact path="/settings" element={<> <Navbar displayNav={true} /> <Settings/> </> } />
                 <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>    
