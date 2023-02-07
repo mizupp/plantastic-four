@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-const Settings = () => {
+const Prediction = () => {
     const [list, setList] = useState([]);
     const [data, setData] = useState([{}])
 
@@ -81,7 +81,7 @@ return (
 <button className="form-control btn btn-secondary btn-sm mb-2">Add a new food</button>
 
 
-        <h1>Settings page</h1>
+        <h1>Prediction page</h1>
         <section className="" id="test">
           <h3 className=""> Test Your Plants</h3>
           <div className="" style={{justifyContent: 'center'}}>
@@ -102,6 +102,6 @@ return (
 )
 }
 
-export default Settings;
+export default Prediction;
 
 

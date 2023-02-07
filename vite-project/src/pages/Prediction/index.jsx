@@ -3,7 +3,7 @@ import axios from "axios";
 import UploadImage from "../../components/UploadImage";
 import PredictImage from "../../components/PredictImage";
 
-const Settings = () => {
+const Prediction = () => {
 
 
 
@@ -15,6 +15,6 @@ return (
 )
 }
 
-export default Settings;
+export default Prediction;
 
 
