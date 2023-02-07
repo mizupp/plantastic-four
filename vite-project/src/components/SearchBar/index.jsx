@@ -1,42 +1,51 @@
-import React from 'react'
-import './styles.css'
+import axios, { all } from "axios";
+import React from "react";
+import { useState } from "react";
+import "./styles.css";
 
-const SearchBar = ({plants, setSearchResults }) => {
-const handleSubmit = (e) => e.preventDefault()
+const SearchBar = ({ loadResults }) => {
+  const [searchTerm, setSearchTerm] = useState("");
 
-const handleSearchChange = (e) => {
-    
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const inputValue = e.target.value;
-    console.log(filterWord(inputValue));
-
-    if (!inputValue) {
-      return setSearchResults(plants) // If input is empty, display all plants
+    const headers = {
+      Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+    };
+    const allPlants = await axios.get("http://localhost:5000/plants", {
+      headers,
+    });
+    console.log(allPlants.data);
+    const arr = [];
+    if (inputValue.length > 2) {
+      allPlants.data.forEach((plant) => {
+        if (plant.names.toLowerCase().includes(inputValue.toLowerCase())) {
+          arr.push(plant);
+        }
+      });
     }
-    else {
-      const resultsArray = plants.filter(plant => plant.name.includes(filterWord(inputValue)))
-      setSearchResults(resultsArray)
-    }
-}
+    loadResults(arr);
+  };
 
-const filterWord = (word) => {
-  let string = word;
-  let newString = string[0].toUpperCase() + string.slice(1);
-  return newString;
-}
-
+  // const handleSearchChange = (e) => {
+  //   const inputValue = e.target.value;
+  //   setSearchTerm(inputValue);
+  // };
 
   return (
-    <div className='search-bar-comp'>
-        <form className='search' onSubmit={handleSubmit}>
-        <input className='search-input'
-        type="text"
-        name='searchValue'
-        id="search"
-        onChange={handleSearchChange} />
-        <button className='search-btn' />
-        </form>
+    <div className="search-bar-comp">
+      <form className="search">
+        <input
+          className="search-input"
+          type="text"
+          name="searchValue"
+          id="search"
+          onChange={handleSubmit}
+        />
+        {/* <input type="submit" value={"Search"} /> */}
+      </form>
     </div>
-  )
-}
+  );
+};
 
 export default SearchBar;

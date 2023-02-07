@@ -1,0 +1,29 @@
+/* Settings page styling  */
+
+.settings-page {
+  text-align: center;
+  font-family: "Fredericka the Great", cursive;
+  font-weight: 700;
+  padding: 100px;
+  padding-left: 300px;
+  padding-right: 300px;
+  background-color: #43a047;
+  border-top-left-radius: 70% 60%;
+  border-bottom-right-radius: 70% 60%;
+  -moz-border-top-left-radius: 70% 50%;
+  -moz-border-bottom-right-radius: 70% 50%;
+}
+
+.settings-page h1 {
+  font-size: 2.5rem;
+  padding-bottom: 40px;
+}
+
+.settings-page .settings-username {
+  padding-bottom: 40px;
+  font-size: 2rem;
+}
+
+.settings-page .settings-delete {
+  font-size: 1.5rem;
+}

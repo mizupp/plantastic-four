@@ -15,7 +15,7 @@ function App() {
     <Navbar />
 	  <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<LoginRegister />} />
+            <Route  path="/login" element={<LoginRegister />} />
               {/* <Route exact path="/home" element={<HomePage />} /> */}
               <Route exact path="/home" element={ <><Navbar displayNav={true} /> <HomePage /> </>} />
               <Route exact path="/prediction" element={ <><Navbar displayNav={true} /> <Prediction /> </>} />

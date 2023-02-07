@@ -6,3 +6,4 @@ export { default as Shelf } from './Shelf';
 export { default as Search } from './Search';
 export { default as Prediction } from './Prediction';
 export { default as Settings } from './Settings';
+

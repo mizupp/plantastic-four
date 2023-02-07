@@ -148,16 +148,26 @@ function lerpColor(a, b, amount) {
   }
   
   // init canvas
-  let canvas = document.createElement("canvas"),
+    // let canvas2 = document.getElementsByClassName("canvas-home");
+    //var div = document.createElement("div");
+    //div.innerHTML = "top div";
+    let canvas = document.createElement("canvas"),
     ctx = canvas.getContext("2d"),
     W,
     H;
-    let page = document.querySelector("login-page")
-
-  // document.body.appendChild(canvas);
-    document.body.appendChild(canvas);
+    // let page = document.querySelector("login-page")
+canvas.className ="canvas-main"
+  document.body.appendChild(canvas);
+    //div.appendChild(canvas);
+    //div.className = 'canvas-login';
   setSize();
-  
+
+  // div.onresize = function() {
+  //   let old_width = W;
+  //   setSize();
+  //   populate();
+  // };
+
   document.body.onresize = function() {
     let old_width = W;
     setSize();
@@ -445,3 +455,7 @@ function lerpColor(a, b, amount) {
   
   loop();
   wind.reset();
+
+  const remove = () =>{
+    wind.reset()
+  }
