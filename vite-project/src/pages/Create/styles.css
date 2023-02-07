@@ -43,6 +43,13 @@
     
 }
 
+.create-form select {
+    background-color: #43A047;
+    border-radius: 20px;
+    border: none;
+    width: 50%;
+}
+
 .create-form h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;

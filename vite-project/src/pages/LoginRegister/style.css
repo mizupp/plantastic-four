@@ -78,9 +78,7 @@
   color: #4CAF50;
   text-decoration: none;
 }
-.form .register-form {
-  display: none;
-}
+
 .container {
   position: relative;
   z-index: 1;
@@ -115,8 +113,10 @@
   color: #EF3B3A;
 }
 body {
-  background: rgb(141,194,111);
-  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+  background: linear-gradient(to left, rgba(233,223,196,1) 0%,rgba(233,223,196,1) 1%,rgba(237,227,200,1) 2%,rgba(237,227,200,1) 24%,rgba(235,221,195,1) 25%,rgba(233,223,196,1) 48%,rgba(235,221,195,1) 49%,rgba(230,216,189,1) 52%,rgba(230,216,189,1) 53%,rgba(233,219,192,1) 54%,rgba(230,216,189,1) 55%,rgba(230,216,189,1) 56%,rgba(233,219,192,1) 57%,rgba(230,216,189,1) 58%,rgba(230,216,189,1) 73%,rgba(233,219,192,1) 74%,rgba(233,219,192,1) 98%,rgba(235,221,195,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(233,223,196,1) 0%,rgba(233,223,196,1) 1%,rgba(237,227,200,1) 2%,rgba(237,227,200,1) 24%,rgba(235,221,195,1) 25%,rgba(233,223,196,1) 48%,rgba(235,221,195,1) 49%,rgba(230,216,189,1) 52%,rgba(230,216,189,1) 53%,rgba(233,219,192,1) 54%,rgba(230,216,189,1) 55%,rgba(230,216,189,1) 56%,rgba(233,219,192,1) 57%,rgba(230,216,189,1) 58%,rgba(230,216,189,1) 73%,rgba(233,219,192,1) 74%,rgba(233,219,192,1) 98%,rgba(235,221,195,1) 100%);
+  background-size: 100px;
+  background-repeat: repeat; 
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
@@ -127,6 +127,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: auto;
 }
 body {
   user-select:none;

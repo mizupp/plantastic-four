@@ -1,20 +1,13 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios";
-import UploadImage from "../../components/UploadImage";
-import PredictImage from "../../components/PredictImage";
+import React from 'react';
 
 const Settings = () => {
-
-
-
-return (
-    <>
-    <UploadImage />
-    {/* <PredictImage /> */}
-    </>
-)
-}
+    return (
+        <>
+            <h1>Change user name?</h1>
+            <h1>Delete account</h1>
+            <h1>Logout</h1>
+        </>
+    )
+};
 
 export default Settings;
-
-

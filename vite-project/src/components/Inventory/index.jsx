@@ -2,7 +2,7 @@ import React from "react";
 import PlantInfo from "../PlantInfo";
 import "./index.css";
 
-const Inventory = () => {
+const Inventory = ({plants}) => {
   return (
     <div className="inventory">
       <main>
