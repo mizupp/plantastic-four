@@ -1,29 +1,26 @@
 /* Search page styling */
 
 .search-page {
-    background-color: #43A047;
-    font-family: 'Fredericka the Great', cursive;
-    font-weight: 700;    
-    padding: 150px;
-    padding-left: 300px;
-    padding-right: 300px;
-    border-top-left-radius:70% 60%;
-    border-bottom-right-radius:70% 60%;
-    -moz-border-top-left-radius:70% 50%;
-    -moz-border-bottom-right-radius:70% 50%;
+  background-color: #43a047;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  padding: 30px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .search-page h1 {
-    padding: 10px;
-    font-size: 2rem;
+  padding: 10px;
+  font-size: 2rem;
 }
 
 .search-page .search-bar {
-    padding: 20px;
-    /* Styling of the bar is in the bar component */
+  padding: 20px;
+  /* Styling of the bar is in the bar component */
 }
 
 .search-page .search-list {
-    padding: 20px;
-    font-size: 1.5rem;
+  padding: 20px;
+  font-size: 1.5rem;
 }

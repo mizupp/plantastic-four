@@ -4,3 +4,10 @@ export const storeAvatar = (data) => {
         payload: data
     }
 }
+
+export const storePlant = (data) => {
+    return {
+        type: 'STORE_PLANT',
+        payload: data
+    }
+}

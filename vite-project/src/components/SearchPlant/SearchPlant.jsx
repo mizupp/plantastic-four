@@ -1,11 +1,12 @@
 // Linked to search page
 // Creates an article of each plant
 
-const SearchPlant = ({ plant }) => {
+const SearchPlant = ({ handleClick, plant }) => {
+  console.log(plant);
   return (
     <>
       <article>
-        <h2>
+        <h2 onClick={() => handleClick(plant)}>
           {plant.names
             .replace("{", "")
             .replace("}", "")
