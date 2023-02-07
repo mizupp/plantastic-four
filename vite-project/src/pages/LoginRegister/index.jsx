@@ -22,8 +22,9 @@ const handleLogin = async (e) => {
   await axios.post('http://localhost:5000/login', details)
     .then(response => {
         sessionStorage.setItem('token', response.data.access_token),
-        sessionStorage.setItem('username', username)})
-    .then(navigate('/home'))
+        sessionStorage.setItem('username', username)
+        navigate('/home')}
+    )
     .catch(error => console.log('Invalid Credentials'))
    
 }
