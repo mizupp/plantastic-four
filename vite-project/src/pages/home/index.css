@@ -1,7 +1,10 @@
 .canvashome{
     width: 95vw
 }
+.canvas {
+	width: 95vw;
 
+}
 .drag {
     position: absolute;
     height: 80px;

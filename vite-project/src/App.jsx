@@ -17,7 +17,8 @@ function App() {
 	  <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<LoginRegister />} />
-              <Route exact path="/home" element={<HomePage />} />
+              {/* <Route exact path="/home" element={<HomePage />} /> */}
+              <Route exact path="/home" element={ <><Navbar displayNav={true} /> <HomePage /> </>} />
               <Route exact path="/settings" element={ <><Navbar displayNav={true} /> <SettingsPage /> </>} />
               <Route exact path="/search" element={<> <Navbar displayNav={true} /> <Search /> </> } />
               <Route exact path="/shelf" element={<> <Navbar displayNav={true} /> <Shelf /> </> } />

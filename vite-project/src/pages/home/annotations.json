@@ -1,0 +1,59 @@
+[
+    {
+      "title": "Indoor House Plant",
+      "description": "<p>A special kind of Species to keep you alive.</p>",
+      "camPos": {
+        "x": -100,
+        "y": 70,
+        "z": -250
+      },
+      "lookAt": {
+        "x": -124,
+        "y": 73.59,
+        "z":-371.43
+      }
+    },
+    {
+      "title": "Sir Spikey",
+      "description": "<p>This one hurts more than a cactus</p>",
+      "camPos": {
+        "x": 100, 
+        "y": 60,
+        "z": 60
+      },
+      "lookAt": {
+        "x": 128.41,
+        "y": 73.85,  
+        "z": -369.76
+      }
+    },
+    {
+      "title": "Sir Spikey's twin",
+      "description": "Female, so more spikey",
+      "camPos": {
+        "x": 7.13,
+        "y": 1.15,
+        "z": 0.66
+      },
+      "lookAt": {
+        "x": 198.65, 
+        "y": 73.85,
+        "z": -369.76
+      }
+    },
+    {
+      "title": "Cactus",
+      "description": "<p>These bad boys don't need much water</p>",
+      "camPos": {
+        "x": -180,
+        "y": 70,
+        "z": -300
+      },
+      "lookAt": {
+        "x":-198.8, 
+        "y": 73.59, 
+        "z": -371.43
+      }
+    }
+  ]
+  

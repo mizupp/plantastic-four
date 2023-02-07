@@ -4,7 +4,7 @@ import axios from 'axios'
 import {redirect} from 'react-router-dom'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-//import PlantBackground from "../../components/PlantBackground"
+import PlantBackground from "../../components/PlantBackground"
 
 const LoginRegister = () => {
 
@@ -27,6 +27,7 @@ const handleLogin = async (e) => {
         sessionStorage.setItem('username', username)})
     .then(navigate('/home'))
     .catch(error => console.log('Invalid Credentials'))
+    wind.reset();
 }
 
 const handleRegister = async (e) => {

@@ -165,8 +165,8 @@ function lerpColor(a, b, amount) {
   function setSize() {
     // W = canvas.width = window.innerWidth;
     // H = canvas.height = window.innerHeight;
-    W = canvas.width = window.Width;
-    H = canvas.height = window.Height;
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
   }

@@ -14,9 +14,12 @@ const Navbar = ( {displayNav }) => {
     return (
         <div>
             {displayNav ?
+            <>
+            {/* <div className="navlogo"><img className='img-logo' src={logo} alt="Logo" /></div> */}
                 <nav>
+                
                     <ul>
-                        <li><img src='#' alt="Logo" /></li>
+                    <li><img className='img-logo' src={logo} alt="Logo" /></li>
                         <li><NavLink className='home-link' to='/'>Home</NavLink></li>
                         <li><NavLink className='active' to='/shelf'>Shelf</NavLink></li>
                         <li><NavLink className='active' to='/search'>Search</NavLink></li>
@@ -24,6 +27,7 @@ const Navbar = ( {displayNav }) => {
                         <li><NavLink className='active' onClick={handleLogout} to='/'>Logout</NavLink></li>
                     </ul>
                 </nav>
+                </>
             : 
                 <div></div>
             }
