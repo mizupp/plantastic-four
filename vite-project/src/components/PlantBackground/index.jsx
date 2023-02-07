@@ -152,8 +152,10 @@ function lerpColor(a, b, amount) {
     ctx = canvas.getContext("2d"),
     W,
     H;
-  
-  document.body.appendChild(canvas);
+    let page = document.querySelector("login-page")
+
+  // document.body.appendChild(canvas);
+    document.body.appendChild(canvas);
   setSize();
   
   document.body.onresize = function() {

@@ -4,7 +4,7 @@ import axios from 'axios'
 import {redirect} from 'react-router-dom'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import PlantBackground from "../../components/PlantBackground"
+//import PlantBackground from "../../components/PlantBackground"
 
 const LoginRegister = () => {
 
@@ -27,7 +27,7 @@ const handleLogin = async (e) => {
         sessionStorage.setItem('username', username)})
     .then(navigate('/home'))
     .catch(error => console.log('Invalid Credentials'))
-    wind.reset();
+   
 }
 
 const handleRegister = async (e) => {
@@ -41,14 +41,14 @@ const handleRegister = async (e) => {
   await axios.post('http://localhost:5000/register', details)
   .then(setLogin(true))
   .catch(error => console.log('Invalid Credentials'))
-
+ 
 }
 
 
 return (
     <>
     {/* <PlantBackground /> */}
-        <div className="login-page">
+        <div id="login-page" className="login-page">
           {/* <p id="plantintologin">House your plant doing?</p> */}
           <svg viewBox="15 20 300 80">
         <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />

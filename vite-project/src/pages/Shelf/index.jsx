@@ -33,10 +33,12 @@ const Shelf = () => {
     
 return (
     <>
+    <div className="shelfPage">
         <button>Add Plant</button>
         
        {/* {plants ? <Inventory plants={plants} /> : <div>loading</div>} */}
         <Inventory plants={plants}/>
+        </div>
     </>
 )
 }
