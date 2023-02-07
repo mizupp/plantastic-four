@@ -6,16 +6,6 @@ import axios from 'axios'
 
 const Shelf = () => {
     const [plants, setPlants] = useState(null)
-    // const [AvatarSelectionOpen, setAvatarSelectionOpen] = useState(true);
-    // const getPlants = async () => {
-    //     const username = sessionStorage.getItem('username')
-    //     const headers = {
-    //         Authorization: `Bearer ${sessionStorage.getItem('token')}`
-    //     }
-    //     await axios.get(`http://localhost:5000/users/${username}/plants`, {headers})
-    //     .then(response => setPlants(response.data))
-    //     console.log(plants)
-    // }
     
     useEffect(() => {
         async function getPlants() {
@@ -36,8 +26,7 @@ return (
     <div className="shelfPage">
         <button>Add Plant</button>
         
-       {/* {plants ? <Inventory plants={plants} /> : <div>loading</div>} */}
-        <Inventory plants={plants}/>
+       {plants ? <Inventory plants={plants} /> : <div>loading</div>}
         </div>
     </>
 )
