@@ -1,4 +1,33 @@
 .health-prediction {
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
   padding: 50px;
   text-align: center;
+  background-color: var(--plantmediumgreen);
+}
+
+.health-prediction p {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+/* .health-header {
+  margin-bottom: 20px;
+} */
+
+.health-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.health-upload-form {
+  margin-bottom: 10px;
+}
+
+.health-upload-image {
+  width: 30%;
+  margin: auto;
+  border-radius: 5px;
 }

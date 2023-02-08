@@ -8,6 +8,7 @@
   font-family: Arial, Helvetica, sans-serif;
   margin-top: -550px;
   overflow: hidden;
+  background-color: var(--plantbeige);
 }
 
 .errorpage h1 {

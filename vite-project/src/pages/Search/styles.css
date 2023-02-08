@@ -1,7 +1,10 @@
 /* Search page styling */
 
 .search-page {
-  background-color: #43a047;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: var(--plantmediumgreen);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   padding: 30px;
@@ -13,6 +16,10 @@
 .search-page h1 {
   padding: 10px;
   font-size: 2rem;
+}
+
+.search-page h2 {
+  padding: 10px;
 }
 
 .search-page .search-bar {
