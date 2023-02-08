@@ -21,6 +21,7 @@
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@use-gesture/react": "^10.2.24",
 		"axios": "^1.2.2",
+		"dayjs": "^1.11.7",
 		"gsap": "^3.11.4",
 		"jest-environment-jsdom": "^29.3.1",
 		"leva": "^0.9.34",

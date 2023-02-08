@@ -2,20 +2,21 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function UploadImage() {
-  const [prediction, setPrediction] = useState("");
+  // const [prediction, setPrediction] = useState("");
   const [image, setImage] = useState("");
+  const [result, setResult] = useState("");
 
-  async function fetchData() {
-    let PredictData = await axios.post("http://localhost:5000/predict");
-    console.log(PredictData);
-    setPrediction(PredictData.data);
-  }
+  // async function fetchData() {
+  //   let PredictData = await axios.post("http://localhost:5000/predict");
+  //   console.log(PredictData);
+  //   setPrediction(PredictData.data);
+  // }
 
-  const handleUploadImage = (e) => {
-    e.preventDefault();
+  // const handleUploadImage = (e) => {
+  //   e.preventDefault();
 
-    console.log(image);
-  };
+  //   console.log(image);
+  // };
 
   const displayImg = () => {
     const input = document.querySelector(".img-change");
@@ -61,6 +62,7 @@ function UploadImage() {
         .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
+          handleResponse(data);
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -68,21 +70,67 @@ function UploadImage() {
     });
   };
 
+  const handleResponse = (data) => {
+    if (data.is_plant) {
+      if (data.health_assessment.is_healthy) {
+        setResult("This plant looks healthy! Keep doing what you're doing");
+      } else if (!data.health_assessment.is_healthy) {
+        switch (data.health_assessment.diseases[0].name) {
+          case "abiotic":
+            setResult("abiotic");
+            break;
+          case "water-related issue":
+            setResult(
+              "Looks like your plant could do with more water! Consider increasing the frequency in which you water your plant."
+            );
+            break;
+          case "water excess or uneven watering":
+            setResult(
+              "Looks like you've been watering your plant a little too much! Consider decreasing the frequency in which you water your plant."
+            );
+            break;
+          case "water deficiency":
+            setResult(
+              "Looks like your plant could do with more water! Consider increasing the frequency in which you water your plant."
+            );
+            break;
+          case "nutrient-related issue":
+            setResult(
+              "Your plants needs more nutrients. Change the soil or add some fertiliser"
+            );
+            break;
+          case "nutrient deficiency":
+            setResult(
+              "Your plants needs more nutrients. Change the soil or add some fertiliser"
+            );
+            break;
+          case "light-related issue":
+            setResult(
+              "Your plant is not getting enough light. If possible, move it to a location that gets more sun!"
+            );
+            break;
+          case "light excess":
+            setResult(
+              "Your plant is getting too much light! Move it to a shadier spot."
+            );
+            break;
+          default:
+            break;
+        }
+      }
+    } else {
+      setResult("Sorry, this doesn't look like a plant to us!");
+    }
+  };
+
   return (
     <>
-      <form onSubmit={sendIdentification}>
-        <div>
-          <input className="img-change" onChange={displayImg} type="file" />
-        </div>
-        <br />
-        <div>
-          <button>Upload</button>
-        </div>
-        <img src={image} alt="img" />
+      <form className="health-upload-form" onSubmit={sendIdentification}>
+        <input className="img-change" onChange={displayImg} type="file" />{" "}
+        <button>Upload</button>
       </form>
-      <p> Result:</p>
-      {/* {Object.entries(this.state.predict)} */}
-      {/* {this.predict.map(predict => <div>{predict}</div>)} */}
+      {image && <img className="health-upload-image" src={image} alt="img" />}
+      {result}
     </>
   );
 }

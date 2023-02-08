@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
 .create-form {
-  background-color: #43a047;
+  background-color: var(--plantmediumgreen);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   display: grid;
@@ -12,6 +12,7 @@
   width: 100vh;
   text-align: center;
   position: relative;
+  margin-top: 50px;
 }
 
 /* HEADING */
@@ -24,11 +25,12 @@
 /* STYLING ALL */
 
 .create-form .input-section {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(141, 194, 111, 1) 0%,
     rgba(118, 184, 82, 1) 50%
-  );
+  ); */
+  background-color: var(--plantdarkgreen);
   margin-bottom: 20px;
   padding: 40px;
   border-top-left-radius: 70% 60%;
@@ -38,14 +40,14 @@
 }
 
 .create-form input {
-  background-color: #43a047;
+  background-color: var(--plantlightgreen);
   border-radius: 20px;
   border: none;
   width: 50%;
 }
 
 .create-form select {
-  background-color: #43a047;
+  background-color: var(--plantlightgreen);
   border-radius: 20px;
   border: none;
   width: 50%;
@@ -79,11 +81,12 @@
 /* ADD PLANT BUTTON */
 
 .create-form .submit-btn {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(141, 194, 111, 1) 0%,
     rgba(118, 184, 82, 1) 50%
-  );
+  ); */
+  background-color: var(--plantlightgreen);
   margin-top: 20px;
   padding: 20px;
   width: 30%;

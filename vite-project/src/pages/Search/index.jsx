@@ -12,8 +12,7 @@ import axios from "axios";
 import "./styles.css";
 
 const Search = () => {
-  
-  const [plant, setPlant] = useState(null)
+  const [plant, setPlant] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -25,24 +24,31 @@ const Search = () => {
   };
 
   const getPlant = (plant) => {
-    console.log(plant)
-    setPlant(plant)
-  }
+    console.log(plant);
+    setPlant(plant);
+  };
 
   return (
     <div className="search-page">
       <div>
         <h1>Search Page</h1>
         <h2>Don't know the name of your plant? Search it up here</h2>
-        <div className="search-bar">
-          <SearchBar loadResults={loadResults} />
-        </div>
+        <h2>
+          Can't find your plant in the database? Add it{" "}
+          <NavLink to="/create">here</NavLink>
+        </h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
           <>
+            <div className="search-bar">
+              <SearchBar loadResults={loadResults} />
+            </div>
             <div className="search-list">
-              <SearchListPlants getPlant={getPlant} searchResults={searchResults} />
+              <SearchListPlants
+                getPlant={getPlant}
+                searchResults={searchResults}
+              />
             </div>
           </>
         )}
