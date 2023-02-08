@@ -4,4 +4,16 @@
   position: absolute;
   top: 50%;
   left: 40%;
+  width: 400px;
+  height: 400px;
+}
+
+.modal #delete-btn {
+  @apply font-bold py-2 px-4 rounded;
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.modal #edit-btn {
+  @apply font-bold py-2 px-4 rounded;
+  @apply bg-blue-600 hover:bg-blue-700 text-white;
 }
