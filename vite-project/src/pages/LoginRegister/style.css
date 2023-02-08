@@ -1,14 +1,46 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+
+.login-back {
+  height: 100% !important;
+  width: 100% !important;
+  user-select: none;
+  background-color: #cdcdcd;
+  overflow: hidden auto;
+  background-image: url("https://miznauppal.b-cdn.net/smallbackground.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+}
+svg {
+  height: 50vh;
+  width: vw;
+  position: absolute;
+}
+text {
+  font-size: 23px;
+}
+.text1,
+.text2,
+.text3 {
+  opacity: 1;
+}
 
 #plantintologin {
-  font-size: 2.02rem;
-  margin-top: 2rem;
+  font-size: 3em;
   font-weight: 700;
   z-index: 10;
-  font-family: Arial, Helvetica, sans-serif;
-  fill: #aab7ab;
-  stroke: rgba(0, 0, 0, 0.24);
+  font-family: "Rubik Vinyl", cursive;
+  text-align: center;
+  color: #579434;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 2px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(82, 7, 7, 0.2),
+    0 20px 20px rgba(4, 181, 160, 0.15);
 }
 .login-page {
   width: 500px;
@@ -25,6 +57,7 @@
   z-index: 1;
   background: #ffffff;
   max-width: 500px;
+
   margin: 0 auto 150px;
   padding: 45px;
   text-align: center;
@@ -34,7 +67,16 @@
   border: 50px;
   border-style: dashed;
   border-color: #f7f4e6 #579434;
+  background: rgba(255, 255, 255, 0.653);
+  box-shadow: 0 8px 32px 0 rgba(58, 26, 2, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
+
+.form .hidden-label {
+  visibility: hidden;
+}
+
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
@@ -45,7 +87,11 @@
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.form input::placeholder {
+  color: gray;
 }
 .form button {
   font-family: "Roboto", sans-serif;
@@ -53,10 +99,9 @@
   outline: 0;
   background: #4caf50;
   width: 100%;
-
   padding: 55px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -73,12 +118,12 @@
 }
 .form .message {
   margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
+  color: #cd6161;
+  font-size: 13px;
   text-align: left;
 }
 .form .message a {
-  color: #4caf50;
+  color: black;
   text-decoration: none;
 }
 
@@ -106,7 +151,7 @@
   color: #1a1a1a;
 }
 .container .info span {
-  color: #4d4d4d;
+  color: #700a0a;
   font-size: 12px;
 }
 .container .info span a {
@@ -116,71 +161,7 @@
 .container .info span .fa {
   color: #ef3b3a;
 }
-body {
-  background: linear-gradient(
-    to left,
-    rgba(233, 223, 196, 1) 0%,
-    rgba(233, 223, 196, 1) 1%,
-    rgba(237, 227, 200, 1) 2%,
-    rgba(237, 227, 200, 1) 24%,
-    rgba(235, 221, 195, 1) 25%,
-    rgba(233, 223, 196, 1) 48%,
-    rgba(235, 221, 195, 1) 49%,
-    rgba(230, 216, 189, 1) 52%,
-    rgba(230, 216, 189, 1) 53%,
-    rgba(233, 219, 192, 1) 54%,
-    rgba(230, 216, 189, 1) 55%,
-    rgba(230, 216, 189, 1) 56%,
-    rgba(233, 219, 192, 1) 57%,
-    rgba(230, 216, 189, 1) 58%,
-    rgba(230, 216, 189, 1) 73%,
-    rgba(233, 219, 192, 1) 74%,
-    rgba(233, 219, 192, 1) 98%,
-    rgba(235, 221, 195, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(233, 223, 196, 1) 0%,
-    rgba(233, 223, 196, 1) 1%,
-    rgba(237, 227, 200, 1) 2%,
-    rgba(237, 227, 200, 1) 24%,
-    rgba(235, 221, 195, 1) 25%,
-    rgba(233, 223, 196, 1) 48%,
-    rgba(235, 221, 195, 1) 49%,
-    rgba(230, 216, 189, 1) 52%,
-    rgba(230, 216, 189, 1) 53%,
-    rgba(233, 219, 192, 1) 54%,
-    rgba(230, 216, 189, 1) 55%,
-    rgba(230, 216, 189, 1) 56%,
-    rgba(233, 219, 192, 1) 57%,
-    rgba(230, 216, 189, 1) 58%,
-    rgba(230, 216, 189, 1) 73%,
-    rgba(233, 219, 192, 1) 74%,
-    rgba(233, 219, 192, 1) 98%,
-    rgba(235, 221, 195, 1) 100%
-  );
-  background-size: 100px;
-  background-repeat: repeat;
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: auto;
-}
-body {
-  user-select: none;
-  background-color: #f9f9f9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* overflow: hidden; */
-}
 canvas {
   flex-shrink: 0;
   background-color: #4f4f4f;
@@ -199,12 +180,14 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-h1,
+
+.form h1,
 h4 {
   margin: 0;
 }
 h1 {
   font-size: 10vmin;
+  color: white;
 }
 
 h4 {

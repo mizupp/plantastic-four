@@ -1,3 +1,5 @@
+// Health page modal
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -114,23 +116,40 @@ function UploadImage() {
               "Your plant is getting too much light! Move it to a shadier spot."
             );
             break;
+          case "Bacteria":
+            setResult("Your plant has a bacterial disease.");
+            break;
           default:
+            setResult(
+              `Your plant has ${JSON.stringify(
+                data.health_assessment.diseases[0].name
+              )}`
+            );
             break;
         }
       }
     } else {
       setResult("Sorry, this doesn't look like a plant to us!");
     }
+    console.log(result);
   };
 
   return (
     <>
       <form className="health-upload-form" onSubmit={sendIdentification}>
-        <input className="img-change" onChange={displayImg} type="file" />{" "}
-        <button>Upload</button>
+        <label htmlFor="file-upload" className="custom-file-upload">
+          Select a file
+        </label>
+        <input
+          className="img-change"
+          onChange={displayImg}
+          type="file"
+          id="file-upload"
+        />{" "}
+        {image && <img className="health-upload-image" src={image} alt="img" />}
+        {image && <button className="upload-btn">Upload</button>}
       </form>
-      {image && <img className="health-upload-image" src={image} alt="img" />}
-      {result}
+      <div className="health-result">{result}</div>
     </>
   );
 }

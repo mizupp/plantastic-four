@@ -1,0 +1,145 @@
+.identification-modal-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.identification-modal {
+  width: 70vw;
+  height: 70vh;
+  margin: auto;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2vh;
+  background-color: var(--plantcream);
+}
+
+.id-upload-form {
+  z-index: 10;
+  margin: auto;
+  text-align: center;
+  width: 50vh;
+}
+
+/* CSS */
+.closemodalbtn {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--plantmediumgreen);
+  cursor: pointer;
+  border: 3px solid;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 40px;
+  text-align: center;
+}
+
+.closemodalbtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .closemodalbtn {
+    padding: 0.25em 0.75em;
+  }
+}
+
+/* CSS */
+.custom-file-upload {
+  top: 0px;
+  left: 0px;
+
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid var(--plantmediumgreen);
+  cursor: pointer;
+  position: relative;
+  background-color: var(--plantmediumgreen);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.custom-file-upload:after {
+  content: "";
+  background-color: var(--plantmediumgreen);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.custom-file-upload:hover:after {
+  top: 0px;
+  left: 0px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .custom-file-upload {
+    padding: 13px 50px 13px;
+  }
+}
+
+.custom-file-upload,
+.upload-btn {
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--plantwhite);
+  border-radius: 10px;
+  color: var(--plantwhite);
+}
+
+.custom-file-upload:hover,
+.upload-btn:hover {
+  background-color: var(--plantwhite);
+  color: var(--plantmediumgreen);
+}
+
+.information {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 15px;
+  background-color: var(--plantmediumgreen);
+}
+.information h1 {
+  color: white;
+  font-weight: 900;
+}
+
+.information h2 {
+  color: var(--plantcream);
+}
+
+.upload-btn {
+  background-color: var(--plantmediumgreen);
+}
+
+.upload-btn:hover {
+  transition: 0.6s;
+  background-color: var(--plantmediumgreen);
+  color: grey;
+}

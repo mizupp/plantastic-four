@@ -3,14 +3,15 @@
   margin-left: 10%;
   margin-right: 10%;
   border-radius: 20px;
-  padding: 50px;
+  padding: 70px;
   text-align: center;
   background-color: var(--plantmediumgreen);
 }
 
 .health-prediction p {
   font-size: 1.3rem;
-  padding: 10px;
+  padding: 30px;
+  color: var(--plantwhite);
 }
 
 /* .health-header {
@@ -18,6 +19,7 @@
 } */
 
 .health-heading {
+  color: var(--plantwhite);
   font-size: 2.5rem;
   font-weight: 600;
 }
@@ -28,6 +30,27 @@
 
 .health-upload-image {
   width: 30%;
-  margin: auto;
+  margin: 20px auto;
   border-radius: 5px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload,
+.upload-btn {
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--plantwhite);
+  border-radius: 10px;
+  color: var(--plantwhite);
+}
+
+.custom-file-upload:hover,
+.upload-btn:hover {
+  background-color: var(--plantwhite);
+  color: var(--plantmediumgreen);
 }

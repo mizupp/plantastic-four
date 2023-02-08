@@ -1,15 +1,18 @@
 .delete-account {
-  border: 2px solid rgb(168, 1, 1);
   text-align: center;
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(168, 1, 1);
+  background-color: var(--plantwhite);
+  color: var(--plantred);
 }
 
 .delete-account input {
   padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.delete-account input:hover {
-  font-weight: 1000;
+.delete-account:hover {
+  color: var(--plantwhite);
+  background-color: var(--plantred);
 }

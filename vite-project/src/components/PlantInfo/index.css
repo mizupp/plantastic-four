@@ -1,1 +1,43 @@
+/* PlantInfo stying  */
 
+/* Search plant name */
+
+.plant-info .result-name {
+  font-size: 2.5rem;
+}
+
+/* Search results which appear on the right */
+
+.plant-info .search-result {
+  padding-left: 10px;
+}
+
+.plant-info .search-result > li {
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+  color: var(--plantwhite);
+  font-weight: 1000;
+}
+
+.plant-info .search-result > li > p {
+  font-weight: 300;
+  padding: 0;
+}
+
+/* Add plant button */
+
+.plant-info button {
+  text-align: center;
+  border: 1px solid var(--plantwhite);
+  border-radius: 10px;
+  color: var(--plantwhite);
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.plant-info button:hover {
+  color: var(--plantmediumgreen);
+  background-color: var(--plantwhite);
+}

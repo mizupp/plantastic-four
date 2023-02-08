@@ -1,0 +1,21 @@
+/* Footer styling */
+
+.footer {
+  background-color: var(--plantcream);
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+
+  color: var(--plantdarkgreen);
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+}
