@@ -1,45 +1,39 @@
 /* Navbar styling */
 
 nav {
-  background-color: var(--plantlightgreen);
+  background-color: var(--plantcream);
   padding: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   border: 2px solid var(--plantmediumgreen);
-  border-bottom-right-radius: 80px 80px;
-  border-bottom-left-radius: 80px 80px;
+
   top: 0;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  box-shadow: 0 8px 32px 0 rgba(44, 3, 3, 0.256);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 100;
 }
 
 nav li {
   font-size: 1.2rem;
+  color: var(--plantdarkgreen);
 }
 
 nav li:hover {
   transform: translateY(2px);
+  color: var(--plantmediumgreen);
+  opacity: 0.5;
 }
-
-/* .navlogo{
-    background-color: #082618;
-    padding: 50px;
-    width: 100px;
-    font-family: 'Fredericka the Great', cursive;
-    font-weight: 600;
-    border: 3px solid rgb(43, 40, 40);
-    border-bottom-right-radius: 80px 80px;
-    border-bottom-left-radius: 80px 80px;
-    top: 0;
-    margin-top: 10px;
-    z-index: 10;
-    position: absolute;
-} */
 .img-logo {
-  width: 50px;
+  width: 100px;
+  margin-top: -10px;
   z-index: 100;
 }

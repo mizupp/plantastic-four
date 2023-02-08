@@ -10,22 +10,20 @@
 #canvas {
   height: 50px;
   width: 100vw;
-/*   border: solid 3px #000000; */
+  /*   border: solid 3px #000000; */
   background: #fefefe;
 }
 
-
 body {
-  background: #ad0000;
+  background: var(--plantlightgreen);
 }
-
 
 .grass {
   width: 10vmin;
   height: 10vmin;
   position: absolute;
   overflow: hidden;
-  transform: translate(-50%,0%) translate3d(0, 0, 0);
+  transform: translate(-50%, 0%) translate3d(0, 0, 0);
   bottom: 0;
 }
 
@@ -42,21 +40,27 @@ body {
   animation: move-blade-1 10s infinite;
 }
 @keyframes move-blade-1 {
-  0%, 30%, 50%, 55%, 82%, 97%, 100% {
+  0%,
+  30%,
+  50%,
+  55%,
+  82%,
+  97%,
+  100% {
     border-top-right-radius: 50%;
- }
+  }
   20% {
     border-top-right-radius: 30%;
- }
+  }
   40% {
     border-top-right-radius: 20%;
- }
+  }
   70% {
     border-top-right-radius: 25%;
- }
+  }
   90% {
     border-top-right-radius: 35%;
- }
+  }
 }
 .grass__blade--2 {
   border-right: 3vmin solid #339545;
@@ -68,21 +72,27 @@ body {
   animation: move-blade-2 10s infinite;
 }
 @keyframes move-blade-2 {
-  0%, 30%, 50%, 55%, 82%, 97%, 100% {
+  0%,
+  30%,
+  50%,
+  55%,
+  82%,
+  97%,
+  100% {
     border-top-right-radius: 20%;
- }
+  }
   20% {
     border-top-right-radius: 15%;
- }
+  }
   40% {
     border-top-right-radius: 10%;
- }
+  }
   70% {
     border-top-right-radius: 10.5%;
- }
+  }
   90% {
     border-top-right-radius: 12.5%;
- }
+  }
 }
 .grass__blade--3 {
   border-top-left-radius: 15%;
@@ -94,19 +104,25 @@ body {
   animation: move-blade-3 10s infinite;
 }
 @keyframes move-blade-3 {
-  0%, 30%, 50%, 55%, 82%, 97%, 100% {
+  0%,
+  30%,
+  50%,
+  55%,
+  82%,
+  97%,
+  100% {
     border-top-left-radius: 15%;
- }
+  }
   20% {
     border-top-left-radius: 22%;
- }
+  }
   40% {
     border-top-left-radius: 17.5%;
- }
+  }
   70% {
     border-top-left-radius: 18.5%;
- }
+  }
   90% {
     border-top-left-radius: 21%;
- }
+  }
 }

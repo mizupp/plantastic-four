@@ -4,32 +4,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
 .create-form {
+  color: var(--plantwhite);
   background-color: var(--plantmediumgreen);
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
   display: grid;
   height: 80vh;
   width: 100vh;
   text-align: center;
   position: relative;
   margin-top: 50px;
+  margin-left: 100px;
+  border-radius: 20px;
 }
 
 /* HEADING */
 .create-form h1 {
+  color: var(--plantwhite);
   font-size: 2.5rem;
+  font-weight: 700;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.createList {
+  margin-top: 15px;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 /* STYLING ALL */
 
+.create-form label {
+  font-weight: 700;
+}
+
 .create-form .input-section {
-  /* background: linear-gradient(
-    90deg,
-    rgba(141, 194, 111, 1) 0%,
-    rgba(118, 184, 82, 1) 50%
-  ); */
+  color: var(--plantwhite);
   background-color: var(--plantdarkgreen);
   margin-bottom: 20px;
   padding: 40px;
@@ -40,13 +51,8 @@
 }
 
 .create-form input {
-  background-color: var(--plantlightgreen);
-  border-radius: 20px;
-  border: none;
-  width: 50%;
-}
-
-.create-form select {
+  color: black;
+  font-weight: 700;
   background-color: var(--plantlightgreen);
   border-radius: 20px;
   border: none;
@@ -80,14 +86,13 @@
 
 /* ADD PLANT BUTTON */
 
+.create-form .submit-create {
+  margin-top: 30px;
+}
+
 .create-form .submit-btn {
-  /* background: linear-gradient(
-    90deg,
-    rgba(141, 194, 111, 1) 0%,
-    rgba(118, 184, 82, 1) 50%
-  ); */
+  color: black;
   background-color: var(--plantlightgreen);
-  margin-top: 20px;
   padding: 20px;
   width: 30%;
   margin-top: -10px;
@@ -100,5 +105,12 @@
 /* AVATAR STYLING */
 
 .create-form .avatar {
-  width: 40%;
+  width: 50%;
+}
+
+.create-form .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 20px;
+  margin-bottom: 20px;
 }

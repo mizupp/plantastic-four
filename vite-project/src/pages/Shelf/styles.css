@@ -1,5 +1,7 @@
 /* This is not actually doing any styling? */
-
+.shelfPage {
+  display: flex;
+}
 .inventory {
   height: 95vh;
   /* border: 10px solid #ffffff; */
@@ -7,6 +9,7 @@
   grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
   grid-column-gap: 0px;
   column-gap: 0px;
+  padding: 40px;
 
   grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
   grid-auto-rows: auto;
@@ -14,6 +17,12 @@
   overflow: scroll;
   overflow-x: hidden;
   background-color: var(--plantwhite);
+
+  border-right-style: solid;
+  border-right-width: 50px;
+  border-color: #855e42;
+  /* border-left-style: solid; */
+  /* border-left-width: 50px; */
 
   background: linear-gradient(
     to left,
@@ -151,4 +160,74 @@ main {
 
 .card-image {
   cursor: pointer;
+  z-index: 10;
+}
+
+.card-image:hover {
+  border-radius: 4px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: 3px solid #fff;
+  position: relative;
+  transition: 0.9s;
+  border: 0.5rem outset var(--plantbrown);
+  outline: 0.5rem solid var(--plantmediumgreen);
+  box-shadow: 0 0 0 100vw var(--plantmediumgreen);
+  z-index: 10;
+}
+.card-content {
+  color: var(--plantmediumgreen);
+  text-align: center;
+  z-index: 10;
+  margin-bottom: -80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shelf {
+  margin-top: -115px;
+  /* margin-left: 70px; */
+  /* border: 50px solid #855e42; */
+  margin-bottom: 0px;
+  width: 10px;
+  display: block;
+  content: url("../../assets/img/plantshelf.png");
+  position: relative;
+  width: 700px;
+  height: 150px;
+  margin-left: -40px;
+  margin-right: auto;
+  z-index: 0;
+}
+
+.addplant {
+  background-color: var(--plantbrown) !important;
+  color: var(--plantwhite);
+  font-size: 1.5em;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+}
+.addplant span {
+  transform: rotate(-90deg);
+}
+.addplant:hover {
+  transition: 0.6s;
+  color: var(--plantmediumgreen);
+}
+
+.water-button {
+  border: 0.5rem outset var(--plantmediumgreen);
+  border-radius: 12px;
+  margin: 2rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
+}
+.water-button:hover {
+  transition: 0.6s;
+  border: 0.5rem outset rgb(245, 228, 161);
+  outline: 0.5rem solid rgb(21, 73, 10);
+  box-shadow: 0 0 0 2rem skyblue;
 }

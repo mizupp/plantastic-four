@@ -59,24 +59,73 @@ const LoginRegister = () => {
     <>
       {/* <Canvas className="canvas-home"> */}
       {/* <PlantBackground /> */}
+      <div id="login-back" className="login-back"></div>
+
       <div id="login-page" className="login-page">
-        {/* <p id="plantintologin">House your plant doing?</p> */}
-        <svg viewBox="15 20 300 80">
+        <div id="plantintologin">House your plant?</div>
+        {/* <svg
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="500px"
+          height="500px"
+          viewBox="0 0 500 500"
+          enable-background="new 0 0 500 500"
+          xml:space="preserve"
+        >
           <path
-            id="curve"
-            fill="transparent"
-            d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
+            fill="none"
+            stroke="red"
+            id="red"
+            stroke-opacity="1"
+            d="M179.38 313.55A94.65 94.65 0 0 1 155 250a95 95 0 1 1 95 95 94.6 94.6 0 0 1-60.33-21.6"
           />
           <text>
-            <textPath id="plantintologin" xlinkHref="#curve">
-              House your plant doing?
+            <textPath xlink:href="#red" class="text1" startOffset="0%">
+              House
             </textPath>
           </text>
-        </svg>
+
+          <path
+            fill="none"
+            stroke="green"
+            stroke-opacity="1"
+            id="green"
+            d="M145 350a144.5 144.5 0 0 1-40-100c0-80.08 64.92-145 145-145s145 64.92 145 145-64.92 145-145 145c-33.15 0-63.7-11.12-88.12-29.84"
+          />
+          <text>
+            <textPath xlink:href="#green" class="text2" startOffset="0%">
+              Your
+            </textPath>
+          </text>
+
+          <path
+            fill="none"
+            stroke="blue"
+            stroke-opacity="1"
+            id="blue"
+            d="M114.16 382.84A189.38 189.38 0 0 1 60 250c0-104.94 85.06-190 190-190 104.93 0 190 85.06 190 190 0 104.93-85.07 190-190 190-45.35 0-87-15.9-119.66-42.4"
+          />
+          <text>
+            <textPath xlink:href="#blue" class="text3" startOffset="7%">
+              Plant?
+            </textPath>
+          </text>
+        </svg> */}
+
         <div className="form">
           {login ? (
             <form className="login-form">
+              <label className="hidden-label" htmlFor="username">
+                Username
+              </label>
               <input type="text" placeholder="username" />
+              <label className="hidden-label" htmlFor="password">
+                Password
+              </label>
               <input type="password" placeholder="password" />
               <button onClick={handleLogin}>login</button>
               <p className="message">

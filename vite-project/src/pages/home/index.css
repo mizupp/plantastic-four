@@ -1,24 +1,22 @@
-.canvashome{
-    width: 95vw
+.canvashome {
+  width: 95vw;
 }
 .canvas {
-	width: 95vw;
-
+  width: 95vw;
 }
 .drag {
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-radius: 8px;
-    background-color: hotpink;
-    cursor: grab;
-    touch-action: none;
-    -webkit-user-select: none;
-    user-select: none;
-    font-size: 10px;
-  }
-  
-  .drag:focus {
-    border: 2px solid red;
-  }
-  
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 8px;
+  background-color: hotpink;
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 10px;
+}
+
+.drag:focus {
+  border: 2px solid red;
+}

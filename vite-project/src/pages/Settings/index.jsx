@@ -8,7 +8,10 @@ const Settings = () => {
   return (
     <div className="settings-page">
       <h1>Settings Page</h1>
-      <div className="settings-username">Logged in as: {username}</div>
+      <button className="settings-dark"> Toggle Dark/Light Mode</button>
+      <div className="settings-username">
+        Logged in as: <span>{username}</span>
+      </div>
       <div className="settings-delete">
         <DeleteAccount />
       </div>
