@@ -65,7 +65,9 @@ const PlantInfo = ({ results }) => {
             </li>
           </ul>
 
-          <button onClick={handleAdd}>Add to shelf</button>
+          <button className="add-to-shelf-btn" onClick={handleAdd}>
+            Add to shelf
+          </button>
         </div>
       )}
     </div>

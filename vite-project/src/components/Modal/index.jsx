@@ -7,6 +7,7 @@ import "./index.css";
 
 const Modal = ({ id, handleClose }) => {
   const [plant, setPlant] = useState(null);
+  const [imgFile, setImgFile] = useState(null);
   const [form, setForm] = useState(false);
 
   const username = sessionStorage.getItem("username");
@@ -22,9 +23,9 @@ const Modal = ({ id, handleClose }) => {
         })
         .then((response) => setPlant(response.data));
     }
-
     getPlant();
-  }, []);
+    console.log(plant);
+  }, [form]);
 
   const handleDelete = async () => {
     await axios
@@ -44,22 +45,38 @@ const Modal = ({ id, handleClose }) => {
       nickname: e.target.nickname.value,
       water_freq: e.target.water_freq.value,
       purchase_date: e.target.purchase_date.value,
+      plant_img: imgFile,
     };
     await axios
       .put(`http://localhost:5000/users/${username}/plants/${id}`, data, {
         headers,
       })
-      .then(handleClose());
+      .then(setForm(false));
   };
 
-  function unflat(string) {
+  const unflat = (string) => {
     string = string
       .replace("{", "")
       .replace("}", "")
       .replace(/"/g, "")
       .replace(",", ", ");
     return string;
-  }
+  };
+
+  const convertToBase64 = () => {
+    const img = document.querySelector(".user-img");
+    if (img.files && img.files[0]) {
+      let reader = new FileReader();
+      reader.onload = (e) => {
+        const res = e.target.result;
+        setImgFile(res);
+        console.log(res);
+      };
+      reader.readAsDataURL(img.files[0]);
+    }
+  };
+
+  // console.log('image' ,plant.plant.plant_img);
 
   return (
     <div>
@@ -71,7 +88,10 @@ const Modal = ({ id, handleClose }) => {
               <div>
                 <div className="modal-info">
                   <div className="plant-details">
-                    <img src={plant.plant.avatar} alt="icon" />
+                    <img
+                      src={plant.plant.plant_img || plant.plant.avatar}
+                      alt="image"
+                    />
                     <h2>{plant.plant.nickname}</h2>
                     <h2>
                       Purchased{" "}
@@ -134,7 +154,7 @@ const Modal = ({ id, handleClose }) => {
                 </button>
               </div>
             ) : (
-              <form className="edit-form" onSubmit={(e) => handleSubmit(e)}>
+              <form className="edit-form" onSubmit={handleSubmit}>
                 <label htmlFor="nickname">Nickname </label>
                 <input
                   type="text"
@@ -161,6 +181,13 @@ const Modal = ({ id, handleClose }) => {
                 />
                 <br />
                 <br />
+                <label htmlFor="user-img">Upload an image</label>
+                <input
+                  type="file"
+                  name="user-img"
+                  className="user-img"
+                  onChange={convertToBase64}
+                />
                 <input type="submit" value="Edit" />
               </form>
             )}

@@ -34,23 +34,6 @@
   border-radius: 5px;
 }
 
-input[type="file"] {
+#file-upload {
   display: none;
-}
-
-.custom-file-upload,
-.upload-btn {
-  font-weight: bolder;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 3px;
-  border: 1px solid var(--plantwhite);
-  border-radius: 10px;
-  color: var(--plantwhite);
-}
-
-.custom-file-upload:hover,
-.upload-btn:hover {
-  background-color: var(--plantwhite);
-  color: var(--plantmediumgreen);
 }
