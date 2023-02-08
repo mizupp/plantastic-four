@@ -93,15 +93,14 @@ const AvatarSelection = () => {
       <div className="avatar-selection">
         <div className="flex flex-col items-center gap-2 bg-#43A047-200 rounded-lg p-2 drop-shadow-lg text-#fef9e8">
           <div className="title">Choose your plant's avatar</div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 text-6xl">
+          <div className="grid md:grid-cols-5 gap-auto text-auto">
             {avatars.map((a, i) => (
               <>
                 <img
-                  // onLoad={onLoad}
                   src={a}
                   id={a}
                   key={i}
-                  className={` h-20 w-30 ${
+                  className={` h-20 w-50 ${
                     a == selectedAvatar ? "opacity-20" : "opacity-100"
                   }`}
                   onClick={() => onSelect(a)}

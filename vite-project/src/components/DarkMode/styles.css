@@ -12,3 +12,15 @@
   --text-secondary: grey;
   --accent: darkred;
 }
+
+.dark {
+  filter: grayscale(90%);
+}
+
+.light {
+  filter: contrast(100%);
+}
+
+.white-content {
+  background: #e4e4e4;
+}

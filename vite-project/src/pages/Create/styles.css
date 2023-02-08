@@ -3,38 +3,37 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
+.create-plant-page {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--plantbrown);
+}
 .create-form {
   color: var(--plantwhite);
   background-color: var(--plantmediumgreen);
   font-family: Arial, Helvetica, sans-serif;
-  display: grid;
-  height: 80vh;
-  width: 100vh;
   text-align: center;
-  position: relative;
-  margin-top: 50px;
-  margin-left: 100px;
-  border-radius: 20px;
 }
 
 /* HEADING */
 .create-form h1 {
+  margin-top: 30px;
   color: var(--plantwhite);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .createList {
-  margin-top: 15px;
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
     var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
     var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /* STYLING ALL */
-
 .create-form label {
   font-weight: 700;
 }
@@ -42,12 +41,9 @@
 .create-form .input-section {
   color: var(--plantwhite);
   background-color: var(--plantdarkgreen);
-  margin-bottom: 20px;
-  padding: 40px;
-  border-top-left-radius: 70% 60%;
-  border-bottom-right-radius: 70% 60%;
-  -moz-border-top-left-radius: 70% 50%;
-  -moz-border-bottom-right-radius: 70% 50%;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 .create-form input {
@@ -56,11 +52,11 @@
   background-color: var(--plantlightgreen);
   border-radius: 20px;
   border: none;
-  width: 50%;
+  width: 80%;
 }
 
 .create-form h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
@@ -70,13 +66,12 @@
   width: 400px;
   position: absolute;
   right: 100px;
-  top: 0px;
+  top: 30px;
 }
 
 /* NICKNAME*/
-
 .create-form #nickname {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* WATERING FREQUENCY  */
@@ -93,7 +88,7 @@
 .create-form .submit-btn {
   color: black;
   background-color: var(--plantlightgreen);
-  padding: 20px;
+  padding: 10px;
   width: 30%;
   margin-top: -10px;
   border-top-left-radius: 70% 60%;
@@ -102,15 +97,7 @@
   -moz-border-bottom-right-radius: 70% 50%;
 }
 
-/* AVATAR STYLING */
-
-.create-form .avatar {
-  width: 50%;
-}
-
 .create-form .title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  padding: 20px;
-  margin-bottom: 20px;
 }
