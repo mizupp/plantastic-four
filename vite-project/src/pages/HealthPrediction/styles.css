@@ -29,11 +29,32 @@
 }
 
 .health-upload-image {
-  width: 30%;
+  width: 50%;
   margin: 20px auto;
   border-radius: 5px;
 }
 
+.health-result {
+  font-size: 1.3rem;
+  color: var(--plantwhite);
+}
+
 #file-upload {
   display: none;
+}
+
+/* Upload health photo button */
+
+.health-file-upload {
+  cursor: pointer;
+  color: var(--plantwhite);
+  font-weight: 700;
+  border: 1px solid var(--plantwhite);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.health-file-upload:hover {
+  color: var(--plantmediumgreen);
+  background-color: var(--plantwhite);
 }

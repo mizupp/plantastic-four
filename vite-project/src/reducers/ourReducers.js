@@ -1,5 +1,5 @@
 const initState = {
-  avatar: "",
+  avatar: "src/assets/img/33.png",
   plant: {},
 };
 

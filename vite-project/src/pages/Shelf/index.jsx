@@ -48,7 +48,7 @@ const Shelf = () => {
   return (
     <div className="shelfPage">
       <NavLink className="addplant" to="/search">
-        <span> Add plant </span>
+        Add plant
       </NavLink>
       <div className="inventory">
         {plants && (
