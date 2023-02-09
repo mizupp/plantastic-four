@@ -21,7 +21,8 @@
 }
 
 .modal-body {
-  background-color: white;
+  background-color: var(--plantwhite);
+  color: var(--plantdarkgreen);
   padding: 20px;
   border-radius: 10px;
   min-height: 50%;
@@ -41,16 +42,40 @@
 
 .modal #delete-btn {
   margin: 10px;
+  color: var(--plantred);
+  border: 2px solid var(--plantred);
+  border-radius: 10px;
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+}
 
-  @apply font-bold py-2 px-4 border-solid rounded;
-  @apply bg-red-600 text-white hover:bg-red-700;
+.modal #close-btn {
+  font-size: 20px;
+}
+
+.modal #delete-btn:hover {
+  background-color: var(--plantred);
+  color: var(--plantwhite);
 }
 
 .modal #edit-btn {
   margin: 20px;
+  border: 2px solid var(--plantmediumgreen);
+  border-radius: 10px;
+  color: var(--plantmediumgreen);
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+}
 
-  @apply font-bold py-2 px-4 rounded;
-  @apply bg-green-600 hover:bg-green-700 text-white;
+.modal #edit-btn:hover {
+  background-color: var(--plantmediumgreen);
+  color: var(--plantwhite);
 }
 
 .modal-info {
@@ -59,19 +84,22 @@
 }
 
 .plant-details {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .plant-data {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .edit-form input {
-  border: 1px solid rgb(200, 200, 200);
+  margin-top: 5px;
+  border: 1px solid var(--plantmediumgreen);
   border-radius: 10px;
   padding: 5px;
+  background-color: var(--plantwhite);
 }
 
 .edit-form label {
@@ -80,6 +108,17 @@
 }
 
 .edit-form input[type="submit"] {
-  @apply font-bold py-2 px-4 rounded;
-  @apply bg-green-600 hover:bg-green-700 text-white;
+  border: 1px solid var(--plantmediumgreen);
+  border-radius: 10px;
+  color: var(--plantmediumgreen);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.edit-form input[type="submit"]:hover {
+  background-color: var(--plantmediumgreen);
+  color: var(--plantwhite);
 }

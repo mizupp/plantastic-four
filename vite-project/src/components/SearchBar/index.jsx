@@ -35,13 +35,20 @@ const SearchBar = ({ loadResults }) => {
   return (
     <div className="search-bar-comp">
       <form className="search">
-        <input
-          className="search-input"
-          type="text"
-          name="searchValue"
-          id="search"
-          onChange={handleSubmit}
-        />
+        <div className="search-bar-container">
+          <input
+            className="search-input"
+            type="text"
+            name="searchValue"
+            id="search"
+            onChange={handleSubmit}
+          />
+          <img
+            className="search-icon"
+            src="src/assets/img/search-icon.png"
+            alt="search icon"
+          />
+        </div>
         {/* <input type="submit" value={"Search"} /> */}
       </form>
     </div>

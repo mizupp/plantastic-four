@@ -137,7 +137,7 @@ function UploadImage() {
   return (
     <>
       <form className="health-upload-form" onSubmit={sendIdentification}>
-        <label htmlFor="file-upload" className="custom-file-upload">
+        <label htmlFor="file-upload" className="health-file-upload">
           Select a file
         </label>
         <input
@@ -147,7 +147,7 @@ function UploadImage() {
           id="file-upload"
         />{" "}
         {image && <img className="health-upload-image" src={image} alt="img" />}
-        {image && <button className="upload-btn">Upload</button>}
+        {image && <button className="health-file-upload ">Upload</button>}
       </form>
       <div className="health-result">{result}</div>
     </>

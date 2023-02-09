@@ -10,7 +10,7 @@ This repo contains the frontend files for the website.
 
 ## Motivation :muscle:
 
-## Installation and usage 
+## Installation and usage
 
 ### Installation :inbox_tray:
 
@@ -19,13 +19,11 @@ Note: You can find the repository for the connected API [here](https://github.co
 - Clone or download this repository.
 - Ensure the server in the [backend repository](https://github.com/adamminchella/adam_backend) is running.
 
-
 ### Usage :open_file_folder:
 
 - `npm run dev` to start the server.
 - Navigate to [http://localhost:5173/](http://localhost:5173/)
 - Add some plants or search for plants and HAVE FUN!
-
 
 ## Technologies :desktop_computer:
 
@@ -36,7 +34,6 @@ Note: You can find the repository for the connected API [here](https://github.co
 - Tailwind
 - Deployment: [Netlify](https://www.netlify.com/)
 
-
 ## Process :bar_chart:
 
 - Started with a day planning, using tools such as Figma and creating todo tasks in a Trello board.
@@ -46,10 +43,15 @@ Note: You can find the repository for the connected API [here](https://github.co
 - Worked together to fix any bugs and finalize small features.
 - Deployed website.
 
-
 ## Challenges and Wins
 
-### Challenges :no_entry:
+### Challenges :no_entry
+
+#### Passing variables across components
+
+Problem - Trying to pass variables and data across different components become complex as the app grew.
+
+Solution - Used Redux which has unidirectional data flow to store states and change them by sneding an action.
 
 ### Wins :trophy:
 
@@ -60,11 +62,9 @@ VR
 
 None so far :crossed_fingers:
 
-
 ## Future Features :timer_clock:
 
-
-## Contributors 
+## Contributors
 
 [adamminchella](https://github.com/adamminchella) :man_technologist:
 [mizupp](https://github.com/mizupp) :woman_technologist:

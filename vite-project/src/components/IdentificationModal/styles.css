@@ -17,7 +17,7 @@
   flex-direction: column;
   text-align: center;
   padding: 2vh;
-  background-color: var(--plantcream);
+  background-color: var(--plantwhite);
 }
 
 .id-upload-form {
@@ -60,6 +60,9 @@
 }
 
 /* CSS */
+
+/* Select file button */
+
 .custom-file-upload {
   top: 0px;
   left: 0px;
@@ -77,6 +80,24 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+/* Select file button */
+
+.select-file-btn {
+  cursor: pointer;
+  font-weight: 700;
+  border: 1px solid var(--plantmediumgreen);
+  color: var(--plantmediumgreen);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.identification-modal .select-file-btn:hover {
+  background-color: var(--plantmediumgreen);
+  color: var(--plantwhite);
+}
+
+/* Upload button */
 
 .custom-file-upload:after {
   content: "";
@@ -107,17 +128,17 @@
   font-weight: bolder;
   cursor: pointer;
   padding: 5px 10px;
-  border-radius: 3px;
-  border: 1px solid var(--plantwhite);
+  border: 1px solid var(--plantmediumgreen);
   border-radius: 10px;
+  color: var(--plantmediumgreen);
+}
+
+.upload-btn:hover {
+  background-color: var(--plantmediumgreen);
   color: var(--plantwhite);
 }
 
-.custom-file-upload:hover,
-.upload-btn:hover {
-  background-color: var(--plantwhite);
-  color: var(--plantmediumgreen);
-}
+/* Information modal */
 
 .information {
   margin-top: 10px;
@@ -126,7 +147,7 @@
   background-color: var(--plantmediumgreen);
 }
 .information h1 {
-  color: white;
+  color: var(--plantwhite);
   font-weight: 900;
 }
 
@@ -134,12 +155,7 @@
   color: var(--plantcream);
 }
 
-.upload-btn {
-  background-color: var(--plantmediumgreen);
-}
-
-.upload-btn:hover {
-  transition: 0.6s;
-  background-color: var(--plantmediumgreen);
-  color: grey;
+.upload-img-result {
+  font-size: 1.8rem;
+  color: var(--plantmediumgreen);
 }

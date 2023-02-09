@@ -35,24 +35,25 @@
 }
 
 .search-page h2 {
-  cursor: pointer;
   padding: 0;
   margin: 10px;
   color: var(--plantwhite);
 }
 .search-page .here-link {
-  border: solid #000 3px;
-  border-top-left-radius: 70% 60%;
-  border-bottom-right-radius: 70% 60%;
-  color: var(--plantbrown);
-  background-color: var(--plantbrown);
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  color: var(--plantwhite);
+  border: 1px solid var(--plantwhite);
+  border-radius: 10px;
+  color: var(--plantwhite);
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.search-page .here-link:hover {
+  background-color: var(--plantwhite);
+  color: var(--plantmediumgreen);
 }
 
 .search-page .search-bar {
@@ -67,4 +68,8 @@
 
 .search-info {
   padding-left: 35px;
+}
+
+.search-plant-result:hover {
+  color: var(--plantdarkgreen);
 }
