@@ -20,3 +20,10 @@
 .drag:focus {
   border: 2px solid red;
 }
+
+.annotationDescription {
+  color: rgb(227, 227, 222);
+  background-color: rgba(139, 138, 138, 0.657);
+  padding: 20px;
+  font-size: 35px;
+}

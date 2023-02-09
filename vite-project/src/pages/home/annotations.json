@@ -1,18 +1,90 @@
 [
-    {
-      "title": "Indoor House Plant",
-      "description": "<p>A special kind of Species to keep you alive.</p>",
-      "camPos": {
-        "x": -100,
-        "y": 70,
-        "z": -250
-      },
-      "lookAt": {
-        "x": -124,
-        "y": 73.59,
-        "z":-371.43
-      }
+  {
+    "title": "1. Living Wall",
+    "description": "<p>Don't need rain or much water so works indoor; trend goes back to 1930s.</p>",
+    "camPos": {
+      "x": 210, 
+      "y": 190, 
+      "z": 58
     },
+    "lookAt": {
+      "x": 422.23, 
+      "y": 292.7, 
+      "z": 62.65
+    }
+  },
+  {
+    "title": "2. Indoor Grass installation",
+    "description": "<p>color brings the outdoors inside; provides fresh new feel to the interior of your home.</p>",
+    "camPos": {
+      "x": 10, 
+      "y": 10, 
+      "z": 200
+    },
+    "lookAt": {
+      "x": -0.37, 
+      "y": 4.58, 
+      "z": 331.53
+    }
+  },
+  {
+    "title": "3. Money Plant",
+    "description": "<p>Water the New Money Plant. Money Plant demands an adequate amount of water in its initial days.",
+    "camPos": {
+      "x": -100, 
+      "y":100, 
+      "z": -200 
+    },
+    "lookAt": {
+      "x": -196.52, 
+      "y":122.13, 
+      "z": -381.45 
+    }
+  },
+  {
+    "title": "4. Sir Spikey's twin",
+    "description": "Female, so more spikey",
+    "camPos": {
+      "x": 180, 
+      "y": 250, 
+      "z": -390
+    },
+    "lookAt": {
+      "x": 129.87, 
+      "y": 200.9, 
+      "z": -391.7
+    }
+  },
+  {
+    "title": "5. Potted Plant Shelf",
+    "description": "<p>These bad boys don't need much water</p>",
+    "camPos": {
+      "x": 150, 
+      "y": 160, 
+      "z": -300
+    },
+    "lookAt": {
+      "x": 215.94, 
+      "y": 154.43, 
+      "z": -392.97
+    }
+  },
+
+  {
+    "title": "Cactus",
+    "description": "<p>These bad boys don't need much water</p>",
+    "camPos": {
+      "x": -180,
+      "y": 70,
+      "z": -300
+    },
+    "lookAt": {
+      "x":-198.8, 
+      "y": 73.59, 
+      "z": -371.43
+    }
+  },
+
     {
       "title": "Sir Spikey",
       "description": "<p>This one hurts more than a cactus</p>",
@@ -41,19 +113,77 @@
         "z": -369.76
       }
     },
-    {
-      "title": "Cactus",
-      "description": "<p>These bad boys don't need much water</p>",
-      "camPos": {
-        "x": -180,
-        "y": 70,
-        "z": -300
-      },
-      "lookAt": {
-        "x":-198.8, 
-        "y": 73.59, 
-        "z": -371.43
-      }
+
+  {
+    "title": "6. Ivy Bundles ",
+    "description": "<p>Doesn't grow money.</p>",
+    "camPos": {
+      "x": 100, 
+      "y": 160, 
+      "z": -290
+    },
+    "lookAt": {
+      "x": 136.52, 
+      "y": 193.99, 
+      "z": -399.61
     }
-  ]
-  
+  },
+  {
+    "title": "7. Sensevia",
+    "description": "<p>Doesn't grow money.</p>",
+    "camPos": {
+      "x": -100,
+      "y": 70,
+      "z": -250
+    },
+    "lookAt": {
+      "x": -124,
+      "y": 73.59,
+      "z":-371.43
+    }
+  },
+  {
+    "title": "8. Small Tree",
+    "description": "<p>Yes, you can grow these indoor.</p>",
+    "camPos": {
+      "x": -80, 
+      "y": 50, 
+      "z": -210
+    },
+    "lookAt": {
+      "x": -30.36, 
+      "y": 54.6, 
+      "z": -337.11
+    }
+  },
+
+  {
+    "title": "9. Stair Plant",
+    "description": "<p>Very popular in Hong Kong</p>",
+    "camPos": {
+      "x": 160, 
+      "y": 40, 
+      "z": 20
+    },
+    "lookAt": {
+      "x": 177.21, 
+      "y": 27.93, 
+      "z": 37.11
+    }
+  },
+
+  {
+    "title": "10. Small Tree",
+    "description": "<p>Fun.</p>",
+    "camPos": {
+      "x": -200, 
+      "y":1, 
+      "z": -200
+    },
+    "lookAt": {
+      "x": -225.25, 
+      "y": 4.44, 
+      "z": -323.42
+    }
+  }
+]
