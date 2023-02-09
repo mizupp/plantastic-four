@@ -7,7 +7,7 @@
 // import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 // import "./index.css";
 
-
+ 
 
 
 // import * as THREE from "three";
@@ -291,8 +291,6 @@ export default function HomePage() {
     setLerping(true)
   }
 
-  const [isDragging, setIsDragging] = useState(false);
-const floorPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
   return (
   <Wrapper>
     <Suspense fallback={null}>

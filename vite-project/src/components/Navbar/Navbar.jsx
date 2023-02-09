@@ -44,7 +44,7 @@ const Navbar = ({ displayNav }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className="active" onClick={handleLogout} to="/login">
+                <NavLink className="active" onClick={handleLogout} to="/">
                   Logout
                 </NavLink>
               </li>

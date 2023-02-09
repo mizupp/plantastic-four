@@ -18,7 +18,7 @@ const DeleteAccount = () => {
         `http://localhost:5000/users/${username}`,
         { headers }
       );
-      return navigate("/login");
+      return navigate("/");
     } catch (err) {
       console.log(err);
     }
