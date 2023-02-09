@@ -3,7 +3,7 @@
   display: flex;
 }
 .inventory {
-  height: 95vh;
+  /* height: 95vh; */
   /* border: 10px solid #ffffff; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
@@ -14,15 +14,15 @@
   grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
   grid-auto-rows: auto;
   grid-gap: 0.5rem;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
   background-color: var(--plantwhite);
 
   border-right-style: solid;
-  border-right-width: 50px;
+  border-right-width: 25px;
   border-color: #855e42;
-  /* border-left-style: solid; */
-  /* border-left-width: 50px; */
+  border-left-style: solid;
+  border-left-width: 25px;
 
   background: linear-gradient(
     to left,
@@ -100,7 +100,7 @@ main {
 }
 
 .shelfPage {
-  padding: 50px;
+  padding-top: 10px;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -149,15 +149,6 @@ main {
   background-repeat: repeat;
 }
 
-.shelfPage a {
-  background-color: #43a047;
-  padding: 5px;
-  border-radius: 10px;
-  border: 1px solid #074518;
-  @apply font-bold py-2 px-4 rounded;
-  @apply hover:bg-green-700;
-}
-
 .card-image {
   cursor: pointer;
   z-index: 10;
@@ -179,7 +170,7 @@ main {
   color: var(--plantmediumgreen);
   text-align: center;
   z-index: 10;
-  margin-bottom: -80px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -189,17 +180,18 @@ main {
   /* margin-left: 70px; */
   /* border: 50px solid #855e42; */
   margin-bottom: 0px;
-  width: 10px;
   display: block;
   content: url("../../assets/img/plantshelf.png");
   position: relative;
-  width: 700px;
-  height: 150px;
-  margin-left: -40px;
+  width: 250px;
+  object-fit: cover;
+  height: 145px;
+  /* margin-left: -40px; */
   margin-right: auto;
   z-index: 0;
 }
 
+/* Add plant button */
 .addplant {
   background-color: var(--plantbrown) !important;
   color: var(--plantwhite);
@@ -209,13 +201,14 @@ main {
   align-items: center;
   text-align: center;
   width: 100px;
+  height: 100px;
+  border: 1px solid var(--plantwhite);
+  border-radius: 10px;
 }
-.addplant span {
-  transform: rotate(-90deg);
-}
+
 .addplant:hover {
-  transition: 0.6s;
-  color: var(--plantmediumgreen);
+  color: var(--plantbrown);
+  background-color: var(--plantwhite);
 }
 
 .water-button {

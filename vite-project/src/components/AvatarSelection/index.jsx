@@ -7,7 +7,6 @@ import { storeAvatar } from "../../actions";
 import {
   image33,
   image34,
-  image35,
   image36,
   image37,
   image38,
@@ -37,6 +36,10 @@ import {
   image62,
   image63,
   image64,
+  image65,
+  image66,
+  image67,
+  image68,
 } from "../../assets/img";
 
 const AvatarSelection = () => {
@@ -44,7 +47,6 @@ const AvatarSelection = () => {
   const [avatars, setAvatars] = useState([
     image33,
     image34,
-    image35,
     image36,
     image37,
     image38,
@@ -74,6 +76,10 @@ const AvatarSelection = () => {
     image62,
     image63,
     image64,
+    image65,
+    image66,
+    image67,
+    image68,
   ]);
 
   const [selectedAvatar, setSelectedAvatar] = useState(image33);

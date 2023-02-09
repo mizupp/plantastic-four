@@ -34,7 +34,6 @@ export { default as logo } from "./logo.png";
 
 export { default as image33 } from "./33.png";
 export { default as image34 } from "./34.png";
-export { default as image35 } from "./35.png";
 export { default as image36 } from "./36.png";
 export { default as image37 } from "./37.png";
 export { default as image38 } from "./38.png";
@@ -64,3 +63,7 @@ export { default as image61 } from "./61.png";
 export { default as image62 } from "./62.png";
 export { default as image63 } from "./63.png";
 export { default as image64 } from "./64.png";
+export { default as image65 } from "./65.png";
+export { default as image66 } from "./66.png";
+export { default as image67 } from "./67.png";
+export { default as image68 } from "./68.png";

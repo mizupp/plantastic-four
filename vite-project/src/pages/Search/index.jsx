@@ -38,28 +38,12 @@ const Search = () => {
     <>
       <div className="search-page">
         <div>
-          <h1>Search Page</h1>
           <p>
             {" "}
             Please use the search bar to find the plant that you are looking
             for. You can add this plant to your shelf
           </p>
 
-          <h2>
-            Can't find the plant you are looking for? Upload an image: <br />
-            <br />
-            <button className="here-link" onClick={() => setShowModal(true)}>
-              here
-            </button>
-          </h2>
-          <h2>
-            Can't find your plant in the database? Add it:
-            <br />
-            <br />
-            <NavLink className="here-link" to="/create">
-              here
-            </NavLink>
-          </h2>
           {loading ? (
             <p>Loading...</p>
           ) : (
@@ -75,6 +59,15 @@ const Search = () => {
               </div>
             </>
           )}
+          <h2>
+            Can't find the plant you are looking for? <br></br>
+            <br></br>Upload a photo and we will tell you the species
+            <br />
+            <br />
+            <button className="here-link" onClick={() => setShowModal(true)}>
+              Upload an image
+            </button>
+          </h2>
         </div>
         <div className="search-info">
           {plant && <PlantInfo results={plant} />}

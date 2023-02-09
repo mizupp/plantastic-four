@@ -91,11 +91,10 @@ const IdentificationModal = ({ handleClose }) => {
           </button>
           <div className="information">
             <h1>Please select a file and then click on upload.</h1>
-            <h2>Our high end product will tell you what plant it is.</h2>
           </div>
           <br />
           <form className="id-upload-form" onSubmit={sendIdentification}>
-            <label htmlFor="file-upload" className="custom-file-upload">
+            <label htmlFor="file-upload" className="select-file-btn">
               Select a file
             </label>
             <input
@@ -109,7 +108,7 @@ const IdentificationModal = ({ handleClose }) => {
             )}
             {image && <button className="upload-btn">Upload</button>}
           </form>
-          {result}
+          <p className="upload-img-result">{result}</p>
         </div>
       </div>
     </>

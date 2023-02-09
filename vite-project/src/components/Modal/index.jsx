@@ -21,7 +21,10 @@ const Modal = ({ id, handleClose }) => {
         .get(`http://localhost:5000/users/${username}/plants/${id}`, {
           headers,
         })
-        .then((response) => setPlant(response.data));
+        .then((response) => {
+          console.log(response.data);
+          setPlant(response.data);
+        });
     }
     getPlant();
     console.log(plant);
@@ -32,7 +35,7 @@ const Modal = ({ id, handleClose }) => {
       .delete(`http://localhost:5000/users/${username}/plants/${id}`, {
         headers,
       })
-      .then(handleClose());
+      .then(() => handleClose());
   };
 
   const handleEdit = () => {
@@ -51,7 +54,7 @@ const Modal = ({ id, handleClose }) => {
       .put(`http://localhost:5000/users/${username}/plants/${id}`, data, {
         headers,
       })
-      .then(setForm(false));
+      .then(() => setForm(false));
   };
 
   const unflat = (string) => {
@@ -83,18 +86,26 @@ const Modal = ({ id, handleClose }) => {
       {plant && (
         <div className="modal">
           <div className="modal-body">
-            <button onClick={handleClose}>X</button>
+            <button id="close-btn" onClick={handleClose}>
+              &#x2715;
+            </button>
             {!form ? (
               <div>
                 <div className="modal-info">
                   <div className="plant-details">
                     <img
-                      src={plant.plant.plant_img || plant.plant.avatar}
+                      src={
+                        plant.plant.plant_img == "false"
+                          ? plant.plant.avatar
+                          : plant.plant.plant_img
+                      }
                       alt="image"
                     />
-                    <h2>{plant.plant.nickname}</h2>
                     <h2>
-                      Purchased{" "}
+                      <b>{plant.plant.nickname}</b>
+                    </h2>
+                    <h2>
+                      Added{" "}
                       {dayjs(plant.plant.purchase_date).format("DD/MM/YYYY")}
                     </h2>
                     <h3>
@@ -188,6 +199,8 @@ const Modal = ({ id, handleClose }) => {
                   className="user-img"
                   onChange={convertToBase64}
                 />
+                <br />
+                <br />
                 <input type="submit" value="Edit" />
               </form>
             )}

@@ -1,7 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { Create, Search, Shelf, LoginRegister, Prediction } from "./pages";
+import {
+  Create,
+  Search,
+  Shelf,
+  LoginRegister,
+  HealthPrediction,
+} from "./pages";
 
 const App = () => {
   return (
@@ -11,10 +17,10 @@ const App = () => {
         <Route exact path="/create" element={<Create />} />
         <Route exact path="/login" element={<LoginRegister />} />
         <Route exact path="/search" element={<Search />} />
-        <Route exact path="/prediction" element={<Prediction />} />
+        <Route exact path="/prediction" element={<HealthPrediction />} />
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
